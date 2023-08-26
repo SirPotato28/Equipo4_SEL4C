@@ -20,6 +20,8 @@
 		BEC01FEA2A99C4860096DC77 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC01FE92A99C4860096DC77 /* ViewController3.swift */; };
 		BEC01FEC2A99C7400096DC77 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC01FEB2A99C7400096DC77 /* ViewController4.swift */; };
 		BEC01FEE2A99CA370096DC77 /* ViewControllerMAIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC01FED2A99CA370096DC77 /* ViewControllerMAIN.swift */; };
+		BEC01FF02A99CF9B0096DC77 /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC01FEF2A99CF9B0096DC77 /* ViewController5.swift */; };
+		BEC01FF22A99D1840096DC77 /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC01FF12A99D1840096DC77 /* ViewController6.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		BEC01FE92A99C4860096DC77 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		BEC01FEB2A99C7400096DC77 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		BEC01FED2A99CA370096DC77 /* ViewControllerMAIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMAIN.swift; sourceTree = "<group>"; };
+		BEC01FEF2A99CF9B0096DC77 /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
+		BEC01FF12A99D1840096DC77 /* ViewController6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController6.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				BEC01FE92A99C4860096DC77 /* ViewController3.swift */,
 				BEC01FEB2A99C7400096DC77 /* ViewController4.swift */,
 				BEC01FED2A99CA370096DC77 /* ViewControllerMAIN.swift */,
+				BEC01FEF2A99CF9B0096DC77 /* ViewController5.swift */,
+				BEC01FF12A99D1840096DC77 /* ViewController6.swift */,
 			);
 			path = SEL4C;
 			sourceTree = "<group>";
@@ -274,7 +280,9 @@
 				BEC01FEC2A99C7400096DC77 /* ViewController4.swift in Sources */,
 				BEC01FBC2A99BB590096DC77 /* ViewController.swift in Sources */,
 				BEC01FEE2A99CA370096DC77 /* ViewControllerMAIN.swift in Sources */,
+				BEC01FF02A99CF9B0096DC77 /* ViewController5.swift in Sources */,
 				BEC01FE82A99C0740096DC77 /* ViewController2.swift in Sources */,
+				BEC01FF22A99D1840096DC77 /* ViewController6.swift in Sources */,
 				BEC01FB82A99BB590096DC77 /* AppDelegate.swift in Sources */,
 				BEC01FBA2A99BB590096DC77 /* SceneDelegate.swift in Sources */,
 			);
