@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8476B58D2A9D7EA3007AAF7C /* ViewController7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476B58C2A9D7EA3007AAF7C /* ViewController7.swift */; };
 		BEC01FB82A99BB590096DC77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC01FB72A99BB590096DC77 /* AppDelegate.swift */; };
 		BEC01FBA2A99BB590096DC77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC01FB92A99BB590096DC77 /* SceneDelegate.swift */; };
 		BEC01FBC2A99BB590096DC77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC01FBB2A99BB590096DC77 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8476B58C2A9D7EA3007AAF7C /* ViewController7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController7.swift; sourceTree = "<group>"; };
 		BEC01FB42A99BB590096DC77 /* SEL4C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEL4C.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC01FB72A99BB590096DC77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC01FB92A99BB590096DC77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				BEC01FED2A99CA370096DC77 /* ViewControllerMAIN.swift */,
 				BEC01FEF2A99CF9B0096DC77 /* ViewController5.swift */,
 				BEC01FF12A99D1840096DC77 /* ViewController6.swift */,
+				8476B58C2A9D7EA3007AAF7C /* ViewController7.swift */,
 			);
 			path = SEL4C;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				BEC01FE82A99C0740096DC77 /* ViewController2.swift in Sources */,
 				BEC01FF22A99D1840096DC77 /* ViewController6.swift in Sources */,
 				BEC01FB82A99BB590096DC77 /* AppDelegate.swift in Sources */,
+				8476B58D2A9D7EA3007AAF7C /* ViewController7.swift in Sources */,
 				BEC01FBA2A99BB590096DC77 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

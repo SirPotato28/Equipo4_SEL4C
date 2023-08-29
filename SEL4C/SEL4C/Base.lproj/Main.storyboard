@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NkF-zi-8XC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1900" y="-2.1126760563380285"/>
         </scene>
-        <!--View ControllerMAIN-->
+        <!--First-->
         <scene sceneID="lXh-zd-Prd">
             <objects>
-                <viewController id="NkF-zi-8XC" customClass="ViewControllerMAIN" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="First" id="NkF-zi-8XC" customClass="ViewControllerMAIN" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vSH-sa-DQn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -556,15 +556,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="6zD-5L-tcg"/>
+                    <connections>
+                        <segue destination="DV3-Ti-fdN" kind="show" id="U7d-mP-Qik"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5R5-6z-CQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5926" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller7-->
         <scene sceneID="Lk3-mg-Cc3">
             <objects>
-                <viewController id="DV3-Ti-fdN" sceneMemberID="viewController">
+                <viewController id="DV3-Ti-fdN" customClass="ViewController7" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A6r-8Q-IhH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -592,6 +595,7 @@
                         <viewLayoutGuide key="safeArea" id="PNA-C7-mgp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Odz-2u-2Xt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9a-nJ-qaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
