@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="muI-8J-72E">
@@ -56,6 +56,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="SIGUIENTE">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="5ml-fI-HZw" kind="show" id="xtf-xI-86Y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cp-76-uId">
                                 <rect key="frame" x="96" y="584" width="200" height="35"/>
@@ -64,6 +67,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="REGRESAR">
                                     <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NkF-zi-8XC" kind="show" id="DC5-Zf-0dQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,7 +89,7 @@
             <objects>
                 <viewController title="First" id="NkF-zi-8XC" customClass="ViewControllerMAIN" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vSH-sa-DQn">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="vdK-q6-13u">
@@ -133,6 +139,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="INGRESAR">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="sZ3-WO-sre"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restablecer contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-Xi-Lgd">
                                 <rect key="frame" x="106" y="593" width="180" height="21"/>
@@ -173,7 +182,7 @@
             <objects>
                 <viewController id="5ml-fI-HZw" customClass="ViewController2" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eWR-C2-dKL">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="gti-fm-DmO">
@@ -226,6 +235,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="SIGUIENTE">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="6HE-Iy-EV5" kind="show" id="RGp-PA-4BY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obR-Eo-MbH">
                                 <rect key="frame" x="96" y="625" width="200" height="35"/>
@@ -234,6 +246,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="REGRESAR">
                                     <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="wPF-ck-Zev"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hhw-Xt-cZX"/>
@@ -253,7 +268,7 @@
             <objects>
                 <viewController id="6HE-Iy-EV5" customClass="ViewController3" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yHy-mT-WOq">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="pyI-mx-7ok">
@@ -292,6 +307,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="SIGUIENTE">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="nQB-zF-Rxd" kind="show" id="r96-XC-hZR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDT-e4-U2e">
                                 <rect key="frame" x="96" y="622" width="200" height="35"/>
@@ -300,6 +318,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="REGRESAR">
                                     <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="5ml-fI-HZw" kind="show" id="SYU-13-FqU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CREA UNA CONTRASEÑA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZa-c8-f8b">
                                 <rect key="frame" x="86" y="256" width="221" height="17"/>
@@ -326,7 +347,7 @@
             <objects>
                 <viewController id="nQB-zF-Rxd" customClass="ViewController4" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R89-GN-dRG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-BR-H72">
@@ -421,6 +442,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="SIGUIENTE">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="HHa-ue-thh" kind="show" id="Ur8-42-3L6"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="DICIPLINA" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lm7-pF-a1V">
                                 <rect key="frame" x="77" y="645" width="239" height="34"/>
@@ -447,7 +471,7 @@
             <objects>
                 <viewController id="HHa-ue-thh" customClass="ViewController5" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="imZ-df-Y4w">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-33-tn7">
@@ -487,6 +511,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="CANCELAR">
                                     <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NkF-zi-8XC" kind="show" id="kNx-8Y-EpR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7w-jo-ZaF">
                                 <rect key="frame" x="96" y="668" width="200" height="35"/>
@@ -495,6 +522,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="ACEPTAR">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="4Fj-QV-1K1" kind="show" id="vcU-3p-XwC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZaO-Z1-lF7"/>
@@ -514,7 +544,7 @@
             <objects>
                 <viewController id="4Fj-QV-1K1" customClass="ViewController6" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a9u-xa-vMV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="qXx-HI-6gd">
@@ -569,7 +599,7 @@
             <objects>
                 <viewController id="DV3-Ti-fdN" customClass="ViewController7" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A6r-8Q-IhH">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="AYl-e2-Dq0">
@@ -620,6 +650,15 @@
             <point key="canvasLocation" x="127.48091603053435" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rck-Eb-522"/>
+        <segue reference="Ur8-42-3L6"/>
+        <segue reference="A9S-UI-as5"/>
+        <segue reference="qkI-XN-Dke"/>
+        <segue reference="xtf-xI-86Y"/>
+        <segue reference="DC5-Zf-0dQ"/>
+        <segue reference="awG-Fq-HGY"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="BACKGROUND" width="430" height="932"/>
         <image name="Rectangle 8" width="268" height="99"/>
