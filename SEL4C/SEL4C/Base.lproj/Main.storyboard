@@ -662,10 +662,10 @@
             </objects>
             <point key="canvasLocation" x="7866.4122137404574" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller8-->
         <scene sceneID="cYt-kq-Wmh">
             <objects>
-                <viewController id="Pg2-nx-dPS" sceneMemberID="viewController">
+                <viewController id="Pg2-nx-dPS" customClass="ViewController8" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3kj-wa-FNz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
