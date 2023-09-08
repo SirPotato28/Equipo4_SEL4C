@@ -17,8 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="muI-8J-72E">
-                                <rect key="frame" x="-18.666666666666657" y="-45" width="430.33333333333326" height="932"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="82-821772_blue-wallpaper-hd-download" translatesAutoresizingMaskIntoConstraints="NO" id="bab-Q5-NRO">
+                                <rect key="frame" x="0.0" y="-10" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="NJM-cE-9GL">
                                 <rect key="frame" x="16" y="56" width="268" height="99"/>
@@ -70,7 +71,6 @@
                         <constraints>
                             <constraint firstItem="zwY-h5-Gxz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="6QR-ry-YLv"/>
                             <constraint firstItem="NJM-cE-9GL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8Fz-z2-nUw"/>
-                            <constraint firstItem="muI-8J-72E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fuw-od-0vX"/>
                             <constraint firstItem="1Cp-76-uId" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="QAP-Ny-4jF"/>
                             <constraint firstItem="1Cp-76-uId" firstAttribute="top" secondItem="TPA-Dt-oB2" secondAttribute="bottom" constant="41" id="QNt-oQ-flW"/>
                             <constraint firstItem="x8h-Y7-NfK" firstAttribute="top" secondItem="zwY-h5-Gxz" secondAttribute="top" id="QQq-Wq-an3"/>
@@ -78,7 +78,6 @@
                             <constraint firstItem="TPA-Dt-oB2" firstAttribute="top" secondItem="zwY-h5-Gxz" secondAttribute="bottom" constant="65" id="SEp-NA-LLV"/>
                             <constraint firstItem="NJM-cE-9GL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SdD-BS-MCo"/>
                             <constraint firstItem="VIz-rm-dti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="Wca-Q7-4QS"/>
-                            <constraint firstItem="muI-8J-72E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y81-sq-qwA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zwY-h5-Gxz" secondAttribute="trailing" constant="64" id="ZcA-Sm-Ir8"/>
                             <constraint firstItem="TPA-Dt-oB2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="cSp-MS-Dp5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C9g-MB-vrc" secondAttribute="trailing" constant="39" id="gVe-cc-R7z"/>
@@ -107,7 +106,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="TMu-l9-Squ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="82-821772_blue-wallpaper-hd-download" translatesAutoresizingMaskIntoConstraints="NO" id="TMu-l9-Squ">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="P3N-uZ-zsu">
@@ -234,8 +233,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="gti-fm-DmO">
-                                <rect key="frame" x="-18.666666666666657" y="-45" width="430.33333333333326" height="932"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="82-821772_blue-wallpaper-hd-download" translatesAutoresizingMaskIntoConstraints="NO" id="z7H-G1-v8g">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="LZy-Rr-jQq">
                                 <rect key="frame" x="16" y="56" width="268" height="99"/>
@@ -300,7 +300,6 @@
                             <constraint firstItem="LZy-Rr-jQq" firstAttribute="leading" secondItem="Hhw-Xt-cZX" secondAttribute="leading" constant="16" id="AhC-OL-eML"/>
                             <constraint firstItem="vga-qc-aiT" firstAttribute="top" secondItem="uC1-qM-i2i" secondAttribute="bottom" constant="21" id="BiU-mY-OIN"/>
                             <constraint firstItem="GOZ-pC-o3s" firstAttribute="top" secondItem="Hhw-Xt-cZX" secondAttribute="top" constant="30" id="FNZ-Yw-Kiq"/>
-                            <constraint firstItem="gti-fm-DmO" firstAttribute="centerX" secondItem="eWR-C2-dKL" secondAttribute="centerX" id="FzH-qg-UPK"/>
                             <constraint firstItem="Hhw-Xt-cZX" firstAttribute="trailing" secondItem="uC1-qM-i2i" secondAttribute="trailing" constant="63" id="GNL-ja-8vf"/>
                             <constraint firstItem="IYB-RQ-Rzz" firstAttribute="top" secondItem="vga-qc-aiT" secondAttribute="bottom" constant="68" id="JJN-Bg-n2Z"/>
                             <constraint firstItem="5OE-AU-cSc" firstAttribute="leading" secondItem="Hhw-Xt-cZX" secondAttribute="leading" constant="19" id="XWt-h4-0dW"/>
@@ -310,7 +309,6 @@
                             <constraint firstItem="5OE-AU-cSc" firstAttribute="top" secondItem="LZy-Rr-jQq" secondAttribute="bottom" constant="50" id="j9H-rT-mqp"/>
                             <constraint firstItem="uC1-qM-i2i" firstAttribute="top" secondItem="5OE-AU-cSc" secondAttribute="bottom" constant="100" id="jIW-FV-BZQ"/>
                             <constraint firstItem="Hhw-Xt-cZX" firstAttribute="trailing" secondItem="vga-qc-aiT" secondAttribute="trailing" constant="95" id="kGc-bg-XAA"/>
-                            <constraint firstItem="gti-fm-DmO" firstAttribute="centerY" secondItem="eWR-C2-dKL" secondAttribute="centerY" id="lqO-x5-ujr"/>
                             <constraint firstItem="uC1-qM-i2i" firstAttribute="leading" secondItem="Hhw-Xt-cZX" secondAttribute="leading" constant="63" id="pdT-Rz-rJi"/>
                             <constraint firstItem="Hhw-Xt-cZX" firstAttribute="trailing" secondItem="GOZ-pC-o3s" secondAttribute="trailing" constant="36" id="utv-Xc-fpd"/>
                         </constraints>
@@ -329,7 +327,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="pyI-mx-7ok">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="82-821772_blue-wallpaper-hd-download" translatesAutoresizingMaskIntoConstraints="NO" id="pyI-mx-7ok">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="OSs-5h-od7">
@@ -425,7 +423,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-BR-H72">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="82-821772_blue-wallpaper-hd-download" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-BR-H72">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="FSr-1A-dIj">
@@ -583,7 +581,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-33-tn7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="82-821772_blue-wallpaper-hd-download" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-33-tn7">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMINOS Y CONDICIONES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yt-Rz-H7W">
@@ -671,7 +669,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="qXx-HI-6gd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="82-821772_blue-wallpaper-hd-download" translatesAutoresizingMaskIntoConstraints="NO" id="qXx-HI-6gd">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="16Z-ys-HMf">
@@ -748,7 +746,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="AYl-e2-Dq0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="82-821772_blue-wallpaper-hd-download" translatesAutoresizingMaskIntoConstraints="NO" id="AYl-e2-Dq0">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="5ml-8j-F0V">
@@ -875,7 +873,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-sd-9zh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="82-821772_blue-wallpaper-hd-download" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-sd-9zh">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="1Ed-bk-lq1">
@@ -969,7 +967,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND" translatesAutoresizingMaskIntoConstraints="NO" id="rcA-IZ-ukz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="82-821772_blue-wallpaper-hd-download" translatesAutoresizingMaskIntoConstraints="NO" id="rcA-IZ-ukz">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="62f-Ap-uRu">
@@ -1189,10 +1187,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Cfs-Qr-xHK"/>
+        <segue reference="XRK-EL-WLC"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="BACKGROUND" width="430" height="932"/>
+        <image name="82-821772_blue-wallpaper-hd-download" width="1440" height="2560"/>
         <image name="Image" width="32" height="32"/>
         <image name="Rectangle 8" width="268" height="99"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
