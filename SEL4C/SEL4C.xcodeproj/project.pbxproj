@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8433DBBF2AA17FB6006B6FE8 /* ViewControllerA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433DBBE2AA17FB6006B6FE8 /* ViewControllerA.swift */; };
 		844754D22AA79D1700EAB2B6 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844754D12AA79D1700EAB2B6 /* SideMenu.swift */; };
+		846C84D22AC35746002C07C0 /* ViewControllerActividadInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C84D12AC35746002C07C0 /* ViewControllerActividadInicial.swift */; };
 		8476B58D2A9D7EA3007AAF7C /* ViewController7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476B58C2A9D7EA3007AAF7C /* ViewController7.swift */; };
 		84D100BE2AA7EDD700704C17 /* ViewController9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D100BD2AA7EDD700704C17 /* ViewController9.swift */; };
 		84F9E41E2AA25E1F00C7A947 /* ActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9E41D2AA25E1F00C7A947 /* ActViewController.swift */; };
@@ -51,6 +52,8 @@
 /* Begin PBXFileReference section */
 		8433DBBE2AA17FB6006B6FE8 /* ViewControllerA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerA.swift; sourceTree = "<group>"; };
 		844754D12AA79D1700EAB2B6 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		846C84CB2AC356F4002C07C0 /* SEL4C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SEL4C-Bridging-Header.h"; sourceTree = "<group>"; };
+		846C84D12AC35746002C07C0 /* ViewControllerActividadInicial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerActividadInicial.swift; sourceTree = "<group>"; };
 		8476B58C2A9D7EA3007AAF7C /* ViewController7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController7.swift; sourceTree = "<group>"; };
 		84D100BD2AA7EDD700704C17 /* ViewController9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController9.swift; sourceTree = "<group>"; };
 		84F9E41D2AA25E1F00C7A947 /* ActViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 				BEC01FCD2A99BB5C0096DC77 /* SEL4CTests */,
 				BEC01FD72A99BB5C0096DC77 /* SEL4CUITests */,
 				BEC01FB52A99BB590096DC77 /* Products */,
+				846C84CB2AC356F4002C07C0 /* SEL4C-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +149,7 @@
 				8433DBBE2AA17FB6006B6FE8 /* ViewControllerA.swift */,
 				844754D12AA79D1700EAB2B6 /* SideMenu.swift */,
 				84D100BD2AA7EDD700704C17 /* ViewController9.swift */,
+				846C84D12AC35746002C07C0 /* ViewControllerActividadInicial.swift */,
 			);
 			path = SEL4C;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				TargetAttributes = {
 					BEC01FB32A99BB590096DC77 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1420;
 					};
 					BEC01FC92A99BB5C0096DC77 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -302,6 +308,7 @@
 				BEC01FEC2A99C7400096DC77 /* ViewController4.swift in Sources */,
 				BEC01FBC2A99BB590096DC77 /* ViewController.swift in Sources */,
 				84F9E4202AA2614400C7A947 /* ViewControllerHamburger.swift in Sources */,
+				846C84D22AC35746002C07C0 /* ViewControllerActividadInicial.swift in Sources */,
 				BEC01FEE2A99CA370096DC77 /* ViewControllerMAIN.swift in Sources */,
 				8433DBBF2AA17FB6006B6FE8 /* ViewControllerA.swift in Sources */,
 				BEC01FF02A99CF9B0096DC77 /* ViewController5.swift in Sources */,
@@ -487,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -504,6 +512,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ITESM.SEL4C;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SEL4C-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -514,6 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -531,6 +542,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ITESM.SEL4C;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SEL4C-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
