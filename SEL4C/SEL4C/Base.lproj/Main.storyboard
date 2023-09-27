@@ -1137,7 +1137,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="31" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrA-EY-oqz">
                                 <rect key="frame" x="34" y="263" width="325" height="415.33333333333326"/>
-                                <mutableString key="text">Estimado participante: el presente cuestionario tiene por objetivo medir tu percepción en cuanto al nivel de logro de las competencias de emprendimiento social y pensamiento complejo.
+                                <string key="text">Estimado participante: el presente cuestionario tiene por objetivo medir tu percepción en cuanto al nivel de logro de las competencias de emprendimiento social y pensamiento complejo.
 
 Se solicita tu valiosa colaboración y la disposición de 10 minutos para responder este test.  Los datos obtenidos serán usados con fines de investigación en innovación educativa. La información obtenida será estrictamente confidencial y  los datos personales serán protegidos de acuerdo con el aviso de privacidad y la ley de protección de datos personales del Tecnológico de Monterrey.
 
@@ -1153,7 +1153,7 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
 
 5: Muy de acuerdo. 
 
-¡Muchas gracias por tu participación!</mutableString>
+¡Muchas gracias por tu participación!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1635,7 +1635,7 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="31" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZO-UM-fkq">
                                 <rect key="frame" x="34" y="263" width="325" height="415.33333333333326"/>
-                                <mutableString key="text">Estimado participante: el presente cuestionario tiene por objetivo medir tu percepción en cuanto al nivel de logro de las competencias de emprendimiento social y pensamiento complejo.
+                                <string key="text">Estimado participante: el presente cuestionario tiene por objetivo medir tu percepción en cuanto al nivel de logro de las competencias de emprendimiento social y pensamiento complejo.
 
 Se solicita tu valiosa colaboración y la disposición de 10 minutos para responder este test.  Los datos obtenidos serán usados con fines de investigación en innovación educativa. La información obtenida será estrictamente confidencial y  los datos personales serán protegidos de acuerdo con el aviso de privacidad y la ley de protección de datos personales del Tecnológico de Monterrey.
 
@@ -1651,7 +1651,7 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
 
 5: Muy de acuerdo. 
 
-¡Muchas gracias por tu participación!</mutableString>
+¡Muchas gracias por tu participación!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
