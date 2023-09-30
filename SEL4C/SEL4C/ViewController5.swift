@@ -2,28 +2,32 @@
 //  ViewController5.swift
 //  SEL4C
 //
-//  Created by Andrew Williams on 26/08/23.
+//  Created by Josue on 28/08/23.
 //
 
 import UIKit
 
 class ViewController5: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
+    @IBOutlet weak var link: UILabel!
+    
+    override func viewDidLoad() {
+            super.viewDidLoad()
 
-    /*
-    // MARK: - Navigation
+            // Agrega un gesto de toque al UILabel
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+            link.isUserInteractionEnabled = true
+            link.addGestureRecognizer(tapGesture)
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        @objc func labelTapped() {
+            // URL que deseas abrir en el navegador
+            if let url = URL(string: "https://tec.mx/es/aviso-de-privacidad-sel4c") {
+                // Abre la URL en el navegador
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    
 
 }

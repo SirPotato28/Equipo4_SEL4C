@@ -2,7 +2,7 @@
 //  ViewControllerMAIN.swift
 //  SEL4C
 //
-//  Created by Andrew Williams on 25/08/23.
+//  Created by Josue on 28/08/23.
 //
 
 import UIKit
@@ -12,27 +12,34 @@ class ViewControllerMAIN: UIViewController {
     @IBOutlet weak var loginbutton: UIButton!
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var emailField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        passField.isSecureTextEntry = true
     }
     
-    @IBAction func Login(_ sender: Any){
-        if(emailField.text == "test" && passField.text == "123"){
-            UserDefaults.standard.set(true, forKey: "loggeduser")
-            let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC")as! ActividadesScene
-            self.navigationController?.pushViewController(HomeVC, animated: true)
-        }
+    @IBAction func login(_ sender: UIButton) {
+        let validEmail = "hola"
+                let validPassword = "hola"
+                
+        if emailField.text == validEmail && passField.text == validPassword {
+                    // Las credenciales son válidas, realiza la transición al UITabBarController
+                    if let tabBarController = storyboard?.instantiateViewController(withIdentifier: "barcontroller") as? UITabBarController {
+                        // Cambia "YourTabBarControllerIdentifier" al identificador de tu UITabBarController en el storyboard
+                        
+                        // Selecciona la pestaña correspondiente (ViewController7)
+                        tabBarController.selectedIndex = 2 // Cambia el índice según tu estructura de pestañas
+                        navigationController?.pushViewController(tabBarController, animated: true)
+                    }
+                }  else {
+                    let alertController = UIAlertController(title: "Error", message: "Usuario o contraseña inválido", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alertController.addAction(okAction)
+                    present(alertController, animated: true, completion: nil)
+                }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

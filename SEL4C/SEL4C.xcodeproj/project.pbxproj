@@ -11,7 +11,11 @@
 		844754D22AA79D1700EAB2B6 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844754D12AA79D1700EAB2B6 /* SideMenu.swift */; };
 		846C84D22AC35746002C07C0 /* ViewControllerActividadInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C84D12AC35746002C07C0 /* ViewControllerActividadInicial.swift */; };
 		8476B58D2A9D7EA3007AAF7C /* ViewController7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476B58C2A9D7EA3007AAF7C /* ViewController7.swift */; };
+		84787D6B2AC7776A0014C7AB /* EcomplexityEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84787D6A2AC7776A0014C7AB /* EcomplexityEngine.swift */; };
+		84787D6D2AC7777F0014C7AB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84787D6C2AC7777F0014C7AB /* Question.swift */; };
+		84787D6F2AC784410014C7AB /* ViewControllerInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84787D6E2AC784410014C7AB /* ViewControllerInicial.swift */; };
 		84D100BE2AA7EDD700704C17 /* ViewController9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D100BD2AA7EDD700704C17 /* ViewController9.swift */; };
+		84F396B12AC605450058417B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F396B02AC605450058417B /* SideMenuViewController.swift */; };
 		84F9E41E2AA25E1F00C7A947 /* ActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9E41D2AA25E1F00C7A947 /* ActViewController.swift */; };
 		84F9E4202AA2614400C7A947 /* ViewControllerHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9E41F2AA2614400C7A947 /* ViewControllerHamburger.swift */; };
 		BE0CD2EA2AA011BB00BE1E7E /* ViewController8.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CD2E92AA011BB00BE1E7E /* ViewController8.swift */; };
@@ -55,7 +59,11 @@
 		846C84CB2AC356F4002C07C0 /* SEL4C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SEL4C-Bridging-Header.h"; sourceTree = "<group>"; };
 		846C84D12AC35746002C07C0 /* ViewControllerActividadInicial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerActividadInicial.swift; sourceTree = "<group>"; };
 		8476B58C2A9D7EA3007AAF7C /* ViewController7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController7.swift; sourceTree = "<group>"; };
+		84787D6A2AC7776A0014C7AB /* EcomplexityEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcomplexityEngine.swift; sourceTree = "<group>"; };
+		84787D6C2AC7777F0014C7AB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		84787D6E2AC784410014C7AB /* ViewControllerInicial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInicial.swift; sourceTree = "<group>"; };
 		84D100BD2AA7EDD700704C17 /* ViewController9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController9.swift; sourceTree = "<group>"; };
+		84F396B02AC605450058417B /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		84F9E41D2AA25E1F00C7A947 /* ActViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActViewController.swift; sourceTree = "<group>"; };
 		84F9E41F2AA2614400C7A947 /* ViewControllerHamburger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHamburger.swift; sourceTree = "<group>"; };
 		BE0CD2E92AA011BB00BE1E7E /* ViewController8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController8.swift; sourceTree = "<group>"; };
@@ -105,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84787D692AC7773E0014C7AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84787D6A2AC7776A0014C7AB /* EcomplexityEngine.swift */,
+				84787D6C2AC7777F0014C7AB /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BEC01FAB2A99BB590096DC77 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +146,7 @@
 		BEC01FB62A99BB590096DC77 /* SEL4C */ = {
 			isa = PBXGroup;
 			children = (
+				84787D692AC7773E0014C7AB /* Model */,
 				BEC01FB72A99BB590096DC77 /* AppDelegate.swift */,
 				BEC01FB92A99BB590096DC77 /* SceneDelegate.swift */,
 				BEC01FBB2A99BB590096DC77 /* ViewController.swift */,
@@ -150,6 +168,8 @@
 				844754D12AA79D1700EAB2B6 /* SideMenu.swift */,
 				84D100BD2AA7EDD700704C17 /* ViewController9.swift */,
 				846C84D12AC35746002C07C0 /* ViewControllerActividadInicial.swift */,
+				84F396B02AC605450058417B /* SideMenuViewController.swift */,
+				84787D6E2AC784410014C7AB /* ViewControllerInicial.swift */,
 			);
 			path = SEL4C;
 			sourceTree = "<group>";
@@ -315,10 +335,14 @@
 				84D100BE2AA7EDD700704C17 /* ViewController9.swift in Sources */,
 				BEC01FE82A99C0740096DC77 /* ViewController2.swift in Sources */,
 				BEC01FF22A99D1840096DC77 /* ViewController6.swift in Sources */,
+				84787D6D2AC7777F0014C7AB /* Question.swift in Sources */,
 				BEC01FB82A99BB590096DC77 /* AppDelegate.swift in Sources */,
 				8476B58D2A9D7EA3007AAF7C /* ViewController7.swift in Sources */,
+				84787D6B2AC7776A0014C7AB /* EcomplexityEngine.swift in Sources */,
 				844754D22AA79D1700EAB2B6 /* SideMenu.swift in Sources */,
 				BE0CD2EA2AA011BB00BE1E7E /* ViewController8.swift in Sources */,
+				84787D6F2AC784410014C7AB /* ViewControllerInicial.swift in Sources */,
+				84F396B12AC605450058417B /* SideMenuViewController.swift in Sources */,
 				BEC01FBA2A99BB590096DC77 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,10 +524,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SEL4C/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,10 +555,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SEL4C/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
