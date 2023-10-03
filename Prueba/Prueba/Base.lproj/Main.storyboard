@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erw-uM-V8A">
+                                <rect key="frame" x="0.0" y="59" width="393" height="741"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3g-sl-xLK">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1400"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVk-Wg-q1a">
+                                                <rect key="frame" x="32" y="29" width="339" height="1309"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Act. 1.- Identificación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aS-ga-jaU">
+                                                        <rect key="frame" x="42" y="29" width="252" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <color key="textColor" red="0.47069504140000001" green="0.27943496839999998" blue="0.72417622989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="90" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nS0-pn-i1l">
+                                                        <rect key="frame" x="18" y="71" width="301" height="1114"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <mutableString key="text">Instrucciones:
+
+1. 	Haz una lluvia de ideas sobre problemas sociales o ambientales que se dan en tu entorno.
+
+¿Cuáles identificas?
+
+ Mínimo deben poder identificar 5 problemáticas.
+
+¿Cómo te afectan estos problemas? ¿Has escuchado que le afecten a alguien cercano?
+
+¿Por qué se consideran un problema?
+
+2. 	Ahora, entrevista a una persona respecto a la misma idea:
+
+¿Qué problemas ambientales o sociales identificas en tu casa, colonia o ciudad o país?
+
+¿Por qué son un problema?
+
+ ¿Quiénes intervienen en el problema?
+
+¿Te has visto afectado por este problema? ¿Cómo?
+
+3. 	Por último, has un recorrido por tu colonia o ciudad y registra lo que ves relacionado con la situación ambiental o social. Busca identificar situaciones que no te agraden o problemas ya identificados.
+
+ ¿Que viste?
+
+  ¿Dónde lo viste?
+
+ ¿Había alguien ocasionándolo o atendiéndolo?
+
+¿Qué debes entregar?
+
+·       Conclusión de la reflexión inicial
+
+·       Conclusión de la entrevista
+
+·       Tabla con el registro de lo observado
+
+</mutableString>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cU-PV-1G8">
+                                                        <rect key="frame" x="96" y="1228" width="146" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Cargar Archivos"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1400" id="4zp-Bd-CkW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="o3g-sl-xLK" firstAttribute="leading" secondItem="erw-uM-V8A" secondAttribute="leading" id="8NE-yQ-Xa7"/>
+                                    <constraint firstItem="o3g-sl-xLK" firstAttribute="top" secondItem="erw-uM-V8A" secondAttribute="top" id="apD-Xi-18l"/>
+                                    <constraint firstAttribute="trailing" secondItem="o3g-sl-xLK" secondAttribute="trailing" id="rL8-1R-m39"/>
+                                    <constraint firstAttribute="bottom" secondItem="o3g-sl-xLK" secondAttribute="bottom" id="uHr-RL-mgp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="erw-uM-V8A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C0O-2R-bdK"/>
+                            <constraint firstAttribute="bottom" secondItem="erw-uM-V8A" secondAttribute="bottom" id="N6I-7m-ESH"/>
+                            <constraint firstItem="o3g-sl-xLK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="aUn-o9-LxB"/>
+                            <constraint firstItem="erw-uM-V8A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nc7-M6-hvd"/>
+                            <constraint firstItem="erw-uM-V8A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rQZ-I9-0GE"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="800"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-656" y="-40"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zzi-1h-hYQ">
+            <objects>
+                <viewController id="Roc-Gn-jsj" customClass="ViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4KZ-Sr-AAU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQr-pC-dnC">
+                                <rect key="frame" x="0.0" y="59" width="393" height="741"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCw-Ai-N5G">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2950"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sec-0T-Esu">
+                                                <rect key="frame" x="32" y="29" width="319" height="2892"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Act. 2.- Investigación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE8-Xd-IV8">
+                                                        <rect key="frame" x="42" y="29" width="253" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <color key="textColor" red="0.47069504140000001" green="0.27943496839999998" blue="0.72417622989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="200" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPN-fh-yHg">
+                                                        <rect key="frame" x="8" y="71" width="311" height="2648"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <mutableString key="text">Instrucciones:
+
+1.  Reflexiona acerca de los problemas que identificaste en la Actividad 1. Teniéndolos en mente, haz una investigación sobre los Objetivos de Desarrollo Sostenible. Te sugerimos los siguientes enlaces:
+ 
+·   	https://youtu.be/MCKH5xk8X-g.
+·   	https://www.undp.org/es/sustainable-development-goals
+
+Revisa cada uno de los objetivos y sus metas e investiga como es que estos se relacionan con los problemas que identificaste.
+
+·   	¿Cuál es el ODS que consideras se relaciona mejor con cada problematica?
+·   	¿Cómo se relaciona con estos temas?	
+·   	¿Hay alguna meta de dicho ODS que de manera concreta hable de esta relación?
+ 
+2.  Los ODS nos permiten comprender como es que estas problemáticas son consideradas Retos y Desafíos para todo el Mundo, sin embargo, es importante que podamos conocer cuál es la situación actual. Como segunda parte de esta actividad, te pedimos que de las 5 problemáticas identificadas en la actividad 1, elijas 3 y realices una investigación que responda las siguientes preguntas:
+ 
+·   	¿Cuál es la situación de estas problemáticas a nivel internacional, regional, nacional y local?
+·   	¿Hay registro de afectaciones en la vida de las personas?
+·   	¿Qué tanto afecta a tu localidad?
+
+Con esta investigación, reflexiona sobre cuál es la problemática que consideras valioso atender. Debes conseguir elegir 1.
+
+Para apoyarte en este proceso de elección, te sugerimos considerar:
+
+·   	Que sea un problema que afecte directamente a tu entorno
+·   	Que tenga un impacto en la calidad de vida de las personas
+·   	Que sea una problemática cercana a nosotros o a alguien que conozcamos
+
+3.  Como último punto de esta actividad, y habiendo elegido 1 problemática, es necesario que hagas un Árbol de Causas y Consecuencias.
+
+Los problemas suelen ser como árboles, con causas que se enraízan en la sociedad y con ramas y hojas que se dividen en múltiples consecuencias que afectan a muchas personas, realidades y entornos. Tomemos de ejemplo la contaminación, la cual puede tener múltiples causas, y sus consecuencias pueden impactar tanto al medioambiente, como a las personas, el clima, la economía, el desarrollo de las ciudades, la salud, etc. Para poder hacer algo al respecto, es importante poder identificar qué es lo que está detonando los problemas, ya que solo así se podrán atender posibles consecuencias.
+
+Una vez hecha esta reflexión, haz una investigación que considere por lo menos 3 posibles causas del problema seleccionado, así como 5 posibles consecuencias. Es relevante que se tomes en cuenta sus consecuencias en el entorno, la sociedad, las personas, la economía u cualquier otra área de abordaje.
+
+Aunque se sugiere que la investigación sea documental, también es posible que te apoyes con entrevistas a especialistas, profesores, familiares o conocedores del tema.
+
+Una vez se haya hecho esta investigación, podrás hacer tu árbol de causas y consecuencias. El tronco del árbol es el problema seleccionado; las raíces son las causas; las ramas y hojas son las consecuencias. Puedes dividir las consecuencias por su impacto internacional, nacional y local.
+
+Se sugiere que esta representación sea gráfica y con base en las herramientas propias que tengas.
+
+En la parte inferior del árbol se sugiere respondas lo siguiente:
+
+·   	A partir de esta información, ¿Por qué es importante atender este problema?
+
+ 
+
+¿Qué debes entregar?
+
+·   	Relación entre ODS y problemas ambientales
+·   	Investigación sobre la situación internacional, nacional y local de las problemáticas
+·   	Árbol de causas y consecuencias del problema seleccionado</mutableString>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rl-BE-UyU">
+                                                        <rect key="frame" x="90" y="2798" width="146" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Cargar Archivos"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2950" id="6wT-P2-kFP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tCw-Ai-N5G" secondAttribute="bottom" id="AEe-8X-Baf"/>
+                                    <constraint firstItem="tCw-Ai-N5G" firstAttribute="leading" secondItem="kQr-pC-dnC" secondAttribute="leading" id="ClO-B5-Uhg"/>
+                                    <constraint firstAttribute="trailing" secondItem="tCw-Ai-N5G" secondAttribute="trailing" id="Ews-HP-oUY"/>
+                                    <constraint firstItem="tCw-Ai-N5G" firstAttribute="top" secondItem="kQr-pC-dnC" secondAttribute="top" id="sKO-YL-4Xl"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Jf-1x-khM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kQr-pC-dnC" firstAttribute="trailing" secondItem="6Jf-1x-khM" secondAttribute="trailing" id="0H6-fP-hOe"/>
+                            <constraint firstItem="kQr-pC-dnC" firstAttribute="leading" secondItem="6Jf-1x-khM" secondAttribute="leading" id="170-cP-GTk"/>
+                            <constraint firstItem="tCw-Ai-N5G" firstAttribute="width" secondItem="4KZ-Sr-AAU" secondAttribute="width" id="T0B-ke-6Z1"/>
+                            <constraint firstItem="kQr-pC-dnC" firstAttribute="top" secondItem="6Jf-1x-khM" secondAttribute="top" id="aWn-2D-feU"/>
+                            <constraint firstAttribute="bottom" secondItem="kQr-pC-dnC" secondAttribute="bottom" id="dsj-gj-CSe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="svj-eH-fAu"/>
+                    <size key="freeformSize" width="393" height="800"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Euc-LD-9al" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487.78625954198469" y="-25.35211267605634"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aE8-iU-5Uc">
+            <objects>
+                <viewController id="d70-SW-xWX" customClass="ViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rwo-FZ-PMv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-g6-Tta">
+                                <rect key="frame" x="0.0" y="59" width="393" height="741"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFs-Bj-UzI">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pmg-QJ-eDQ">
+                                                <rect key="frame" x="32" y="29" width="339" height="2429"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Act. 3.- Ideación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThS-OE-lLZ">
+                                                        <rect key="frame" x="42" y="29" width="197" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <color key="textColor" red="0.47069504140000001" green="0.27943496839999998" blue="0.72417622989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="150" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvS-WL-C2Y">
+                                                        <rect key="frame" x="18" y="71" width="301" height="1855"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <mutableString key="text">Instrucciones:
+
+Antes de arrojarnos a proponer posibles soluciones, es importante que veamos que se hace al respecto en otros lugares. Para ello, te sugerimos que hagas una investigación sobre acciones concretas que se hacen internacional, nacional o localmente para atender el problema que elegiste.
+
+·   ¿Quién ha propuesto acciones para atender este problema -una empresa, una escuela, una persona, un gobierno, una asociación-?
+·   ¿Qué se hace?
+·   ¿Cómo ha mejorado estas acciones la vida de las personas?
+
+Te compartimos dos páginas que pueden serte de utilidad, de dos organizaciones que detonan proyectos como el tuyo:
+
+·   	Empresas de Sistema B: https://www.sistemab.org/directorio-b/
+·   	Fellows de Ashoka: https://www.ashoka.org/en-us/our-network
+
+Reflexiona sobre el hecho de que innovar no siempre es la generación de algo único u original, sino que muchas ocasiones, el innovar puede ser una adaptación a un entorno, momento o grupo poblacional concreto. En ocasiones, lo que se hace en otro contexto puede resultar novedoso en nuestra localidad, lo que lo vuelve innovador. O también, puede haber acciones que se apliquen a cierta población, pero que también pueda ser valioso para otros grupos.
+
+Por ejemplo: Acciones para reducir la basura en las empresas que puedan adaptarse para las escuelas; o acciones que se lleven a cabo en Colombia que podrían adoptarse para la propia ciudad o colonia.
+
+Una vez reflexionado esto, analiza las acciones que identificaste en el punto anterior, cuestionando:
+
+·   	Si la solución que identificaste no es del lugar donde vives, ¿Se podría llevar a cabo en este?
+·   	Si la solución que identificaste es del lugar donde vives, ¿Se podría aplicar en otra ciudad o país?
+·   	¿Quiénes más podrían adoptar la solución que identificaste? ¿Podría realizarse por tus profesores, tu familia o tus vecinos?
+·   	¿Cómo podrías sumarte? ¿Qué necesitarías?
+·   	¿Qué harías diferente? ¿Podrías mejorar algo?
+·   	¿Por qué sería una propuesta innovadora?
+·   	¿Qué nombre le pondrías a su propuesta de solución?
+
+Como cierre de este proceso de ideación deberías poder identificar una acción concreta que pudieras adaptar, mejorar y proponer para resolver el problema elegido.
+
+ 
+
+¿Qué debes entregar?
+
+·   Identificación de posibles soluciones internacionales, nacionales o locales
+·   Reflexión sobre la manera en que podrías adoptar y adaptar alguna de estas posibles propuestas de solución, respondiendo a las preguntas sugeridas.</mutableString>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbn-no-JgW">
+                                                        <rect key="frame" x="93" y="1934" width="146" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Cargar Archivos"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2100" id="0Zb-WG-iob"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aFs-Bj-UzI" firstAttribute="leading" secondItem="fuZ-g6-Tta" secondAttribute="leading" id="G8D-hn-5Pi"/>
+                                    <constraint firstAttribute="trailing" secondItem="aFs-Bj-UzI" secondAttribute="trailing" id="MEO-ev-PU8"/>
+                                    <constraint firstAttribute="bottom" secondItem="aFs-Bj-UzI" secondAttribute="bottom" id="NgU-84-gUU"/>
+                                    <constraint firstItem="aFs-Bj-UzI" firstAttribute="top" secondItem="fuZ-g6-Tta" secondAttribute="top" id="oLc-iL-hUP"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BZd-Eb-RlA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fuZ-g6-Tta" firstAttribute="leading" secondItem="BZd-Eb-RlA" secondAttribute="leading" id="8vK-q6-oZo"/>
+                            <constraint firstItem="fuZ-g6-Tta" firstAttribute="trailing" secondItem="BZd-Eb-RlA" secondAttribute="trailing" id="BVW-Ey-XXT"/>
+                            <constraint firstItem="fuZ-g6-Tta" firstAttribute="top" secondItem="BZd-Eb-RlA" secondAttribute="top" id="HFZ-fO-dwJ"/>
+                            <constraint firstAttribute="bottom" secondItem="fuZ-g6-Tta" secondAttribute="bottom" id="qo9-VL-EyB"/>
+                            <constraint firstItem="aFs-Bj-UzI" firstAttribute="width" secondItem="Rwo-FZ-PMv" secondAttribute="width" id="wkE-7D-YMM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TLQ-5B-EBy"/>
+                    <size key="freeformSize" width="393" height="800"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SaR-oC-zEo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382.4427480916031" y="-25.35211267605634"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dla-ck-7fY">
+            <objects>
+                <viewController id="arK-ds-xzP" customClass="ViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wfr-rg-ylV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCK-nq-5lM">
+                                <rect key="frame" x="0.0" y="59" width="393" height="741"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9f0-3J-dBr">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1400"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-dh-7DN">
+                                                <rect key="frame" x="32" y="29" width="339" height="1309"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Act. 4.- Socialización" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvf-pQ-Nc8">
+                                                        <rect key="frame" x="42" y="29" width="253" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <color key="textColor" red="0.47069504140000001" green="0.27943496839999998" blue="0.72417622989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="90" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eR-hL-vrm">
+                                                        <rect key="frame" x="18" y="71" width="301" height="1114"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <mutableString key="text">Instrucciones:
+
+Una habilidad relevante de cualquier emprendedor social es que pueda comunicar su propuesta para sumar a más personas a la acción. Por ende, esta actividad tiene el objetivo de recibir retroalimentación de otras personas sobre la propuesta.
+
+Debes identificar a 1 persona que pudiera dar retroalimentación sobre la propuesta de solución. Puede sugerirse un familiar, vecino, profesor o alguien cercano. De preferencia busca a alguien que pudiera ser un posible usuario de tu propuesta de solución.
+
+Para realizar esta entrevista, se debe tener claridad de lo que se compartirá por lo que se sugiere que antes de reunirte con esta persona, tengas claro los siguientes puntos:
+
+·   	Nombre de la propuesta de solución
+·   	Problema que atiende
+·   	Lugar o personas que se ven actualmente afectadas por el problema en lo local
+·   	Acción concreta que se propone
+·   	Por qué es innovadora
+·   	Quienes podrían sumarse a esta propuesta
+
+Una vez se tenga esta información, se puede realizar la entrevista. Se sugiere que primero se presente la propuesta considerando los puntos anteriormente desarrollados. Después, será necesario detonar algunas preguntas para recibir retroalimentación:
+
+·   	¿Consideras que es una propuesta viable, es decir, que si puede realizarse?
+·   	¿Consideras que es una propuesta valiosa, es decir, que puede impactar positivamente en donde vivimos?
+·   	¿Te podrías sumar a la propuesta? ¿Cómo lo harías?
+·   	¿Qué sugerirías para que la propuesta fuera más viable, aplicable o tuviera un mayor impacto?
+
+Deberás recabar esta información de tu entrevistado y hacer adecuaciones a tu propuesta en caso de haber tenido alguna retroalimentación valiosa.
+
+¿Qué debes entregar?
+
+·   	Video, Audio o Transcripción de las entrevistas
+·   	Reflexión sobre la retroalimentación recibida</mutableString>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWF-j4-RH4">
+                                                        <rect key="frame" x="96" y="1228" width="146" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Cargar Archivos"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1400" id="rC8-eO-ZAR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9f0-3J-dBr" secondAttribute="bottom" id="7bZ-oa-z6g"/>
+                                    <constraint firstAttribute="trailing" secondItem="9f0-3J-dBr" secondAttribute="trailing" id="AoB-Rg-XnS"/>
+                                    <constraint firstItem="9f0-3J-dBr" firstAttribute="leading" secondItem="HCK-nq-5lM" secondAttribute="leading" id="Kct-VX-Taz"/>
+                                    <constraint firstItem="9f0-3J-dBr" firstAttribute="top" secondItem="HCK-nq-5lM" secondAttribute="top" id="rfR-vS-6MJ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YC9-B6-0Xi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HCK-nq-5lM" firstAttribute="trailing" secondItem="YC9-B6-0Xi" secondAttribute="trailing" id="4Ck-cl-go4"/>
+                            <constraint firstAttribute="bottom" secondItem="HCK-nq-5lM" secondAttribute="bottom" id="G1V-rg-noP"/>
+                            <constraint firstItem="9f0-3J-dBr" firstAttribute="width" secondItem="wfr-rg-ylV" secondAttribute="width" id="HPG-7C-GOo"/>
+                            <constraint firstItem="HCK-nq-5lM" firstAttribute="top" secondItem="YC9-B6-0Xi" secondAttribute="top" id="mZz-cL-uvm"/>
+                            <constraint firstItem="HCK-nq-5lM" firstAttribute="leading" secondItem="YC9-B6-0Xi" secondAttribute="leading" id="qGV-X0-mFD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6TL-M3-G6N"/>
+                    <size key="freeformSize" width="393" height="800"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROB-oX-2LW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277" y="658"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
