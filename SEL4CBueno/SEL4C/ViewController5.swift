@@ -25,5 +25,13 @@ class ViewController5: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func Check(_ sender: UIButton) {
+        if sender.isSelected{
+            sender.isSelected=false
+        } else{
+            sender.isSelected=true
+        }
+    }
 
 }

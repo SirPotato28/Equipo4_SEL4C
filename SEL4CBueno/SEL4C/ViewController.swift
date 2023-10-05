@@ -18,5 +18,16 @@ class ViewController: UIViewController {
     @IBAction func backB1(_ sender: Any) {
         dismiss(animated: true,completion: nil)
     }
+    
+
+    
+    @IBAction func Check(_ sender: UIButton) {
+        if sender.isSelected{
+            sender.isSelected=false
+        } else{
+            sender.isSelected=true
+        }
+    }
+    
 }
 

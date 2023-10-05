@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NkF-zi-8XC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HHa-ue-thh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -581,8 +581,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 27" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-33-tn7">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rectangle 27" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-33-tn7">
+                                <rect key="frame" x="0.0" y="-1" width="393" height="852"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMINOS Y CONDICIONES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yt-Rz-H7W">
                                 <rect key="frame" x="18" y="143" width="357" height="93"/>
@@ -626,6 +626,23 @@
                                     <segue destination="4Fj-QV-1K1" kind="show" id="ybl-7R-hvI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5em-IJ-Bir">
+                                <rect key="frame" x="88" y="574" width="54" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Github-Octicons-Checkbox-16.48 copia"/>
+                                <state key="selected" image="Github-Octicons-Checkbox-16.48"/>
+                                <connections>
+                                    <action selector="Check:" destination="HHa-ue-thh" eventType="touchUpInside" id="qPS-Y9-fSW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="He leído y acepto los términos y condiciones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgS-w2-ebK">
+                                <rect key="frame" x="150" y="543" width="192" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZaO-Z1-lF7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -659,7 +676,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSa-IA-nc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="-65"/>
+            <point key="canvasLocation" x="-492.36641221374043" y="-65.492957746478879"/>
         </scene>
         <!--View Controller6-->
         <scene sceneID="Ujr-LC-HUT">
@@ -2152,7 +2169,7 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
         <!--View Controller-->
         <scene sceneID="7iL-2M-8iV">
             <objects>
-                <viewController id="C9I-U2-tM2" customClass="ViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="C9I-U2-tM2" customClass="ViewController" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rvD-cS-CWh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2273,7 +2290,7 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
         <!--View Controller-->
         <scene sceneID="HB7-8O-geC">
             <objects>
-                <viewController id="2D9-Q4-zlt" customClass="ViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2D9-Q4-zlt" customClass="ViewController" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yMy-Di-PBF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2310,7 +2327,7 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="90" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uw-uS-8M1">
                                                         <rect key="frame" x="18" y="71" width="301" height="1114"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <mutableString key="text">Instrucciones:
+                                                        <string key="text">Instrucciones:
 
 1.  Reflexiona acerca de los problemas que identificaste en la Actividad 1. Teniéndolos en mente, haz una investigación sobre los Objetivos de Desarrollo Sostenible. Te sugerimos los siguientes enlaces:
  
@@ -2359,7 +2376,7 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
 
 ·   	Relación entre ODS y problemas ambientales
 ·   	Investigación sobre la situación internacional, nacional y local de las problemáticas
-·   	Árbol de causas y consecuencias del problema seleccionado</mutableString>
+·   	Árbol de causas y consecuencias del problema seleccionado</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -2405,7 +2422,7 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
         <!--View Controller-->
         <scene sceneID="2qV-8q-rR0">
             <objects>
-                <viewController id="5Xm-dQ-9ct" customClass="ViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5Xm-dQ-9ct" customClass="ViewController" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7CX-8h-bjG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2442,7 +2459,7 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="90" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FV-uh-RNO">
                                                         <rect key="frame" x="18" y="71" width="301" height="1114"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <mutableString key="text">Instrucciones:
+                                                        <string key="text">Instrucciones:
 
 Antes de arrojarnos a proponer posibles soluciones, es importante que veamos que se hace al respecto en otros lugares. Para ello, te sugerimos que hagas una investigación sobre acciones concretas que se hacen internacional, nacional o localmente para atender el problema que elegiste.
 
@@ -2476,7 +2493,7 @@ Como cierre de este proceso de ideación deberías poder identificar una acción
 ¿Qué debes entregar?
 
 ·   Identificación de posibles soluciones internacionales, nacionales o locales
-·   Reflexión sobre la manera en que podrías adoptar y adaptar alguna de estas posibles propuestas de solución, respondiendo a las preguntas sugeridas.</mutableString>
+·   Reflexión sobre la manera en que podrías adoptar y adaptar alguna de estas posibles propuestas de solución, respondiendo a las preguntas sugeridas.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -2522,7 +2539,7 @@ Como cierre de este proceso de ideación deberías poder identificar una acción
         <!--View Controller-->
         <scene sceneID="gp8-03-JX8">
             <objects>
-                <viewController id="Me6-RA-3L2" customClass="ViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Me6-RA-3L2" customClass="ViewController" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Tx-CQ-Yo6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2559,7 +2576,7 @@ Como cierre de este proceso de ideación deberías poder identificar una acción
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="90" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXa-Lf-xXZ">
                                                         <rect key="frame" x="18" y="71" width="301" height="1114"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <mutableString key="text">Instrucciones:
+                                                        <string key="text">Instrucciones:
 
 Una habilidad relevante de cualquier emprendedor social es que pueda comunicar su propuesta para sumar a más personas a la acción. Por ende, esta actividad tiene el objetivo de recibir retroalimentación de otras personas sobre la propuesta.
 
@@ -2586,7 +2603,7 @@ Deberás recabar esta información de tu entrevistado y hacer adecuaciones a tu 
 ¿Qué debes entregar?
 
 ·   	Video, Audio o Transcripción de las entrevistas
-·   	Reflexión sobre la retroalimentación recibida</mutableString>
+·   	Reflexión sobre la retroalimentación recibida</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -2629,12 +2646,43 @@ Deberás recabar esta información de tu entrevistado y hacer adecuaciones a tu 
             </objects>
             <point key="canvasLocation" x="-553" y="930"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dgu-wy-Sj5">
+            <objects>
+                <viewController id="JRz-gd-Me6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HWd-aL-Wan">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCN-Xa-GSV">
+                                <rect key="frame" x="162" y="429" width="72" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Github-Octicons-Checkbox-16.48 copia"/>
+                                <state key="selected" image="Github-Octicons-Checkbox-16.48"/>
+                                <connections>
+                                    <action selector="Check:" destination="UcE-vq-lMa" eventType="touchUpInside" id="XMu-XW-qSk"/>
+                                    <action selector="Ckeckk:" destination="UcE-vq-lMa" eventType="touchUpInside" id="8WW-RC-3vQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g0k-L8-rfA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ofd-cm-up7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="UcE-vq-lMa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="715.26717557251902" y="934.50704225352115"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wCh-R2-C11"/>
+        <segue reference="vKG-Us-bVq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Component 1Bar" width="355" height="34"/>
+        <image name="Github-Octicons-Checkbox-16.48" width="48" height="48"/>
+        <image name="Github-Octicons-Checkbox-16.48 copia" width="48" height="48"/>
         <image name="Grafica-1-ranking-cultu 1imagw graph" width="367" height="273"/>
         <image name="Image" width="32" height="32"/>
         <image name="Rectangle 15imagw graph" width="384" height="479"/>
