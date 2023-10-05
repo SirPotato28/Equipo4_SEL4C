@@ -1,37 +1,19 @@
-//
-//  ViewController5.swift
-//  SEL4C
-//
-//  Created by Andrew Williams on 26/08/23.
-//
-
 import UIKit
 
 class ViewController5: UIViewController {
 
+    @IBOutlet weak var button2: UIButton! // Agrega una referencia al botón 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Inicialmente, deshabilita el botón 2
+        button2.isEnabled = false
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func Check(_ sender: UIButton) {
-        if sender.isSelected{
-            sender.isSelected=false
-        } else{
-            sender.isSelected=true
-        }
+        sender.isSelected = !sender.isSelected
+        
+        // Habilita o deshabilita el botón 2 en función del estado seleccionado del sender
+        button2.isEnabled = sender.isSelected
     }
-
 }

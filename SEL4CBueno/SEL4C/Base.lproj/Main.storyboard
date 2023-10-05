@@ -673,6 +673,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dPY-6i-pCN"/>
+                    <connections>
+                        <outlet property="button2" destination="D7w-jo-ZaF" id="4ZC-Oj-Lse"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSa-IA-nc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,36 +686,36 @@
             <objects>
                 <viewController id="4Fj-QV-1K1" customClass="ViewController6" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a9u-xa-vMV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 27" translatesAutoresizingMaskIntoConstraints="NO" id="qXx-HI-6gd">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="16Z-ys-HMf">
-                                <rect key="frame" x="16" y="44" width="268" height="99"/>
+                                <rect key="frame" x="16" y="0.0" width="268" height="99"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEL4C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mCG-7b-Iur">
-                                <rect key="frame" x="264" y="74" width="93" height="35"/>
+                                <rect key="frame" x="264" y="30" width="93" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USUARIO REGISTRADO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UOb-PY-iGD">
-                                <rect key="frame" x="96" y="305.66666666666669" width="204" height="17"/>
+                                <rect key="frame" x="96" y="300.66666666666669" width="204" height="17"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="🦆 icon _circle check_" translatesAutoresizingMaskIntoConstraints="NO" id="oCc-gL-0Xz">
-                                <rect key="frame" x="120.66666666666669" y="355.66666666666669" width="152" height="141"/>
+                                <rect key="frame" x="120.66666666666669" y="350.66666666666669" width="152" height="141"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="152" id="PN1-MR-VhB"/>
                                     <constraint firstAttribute="height" constant="141" id="fd3-OY-sfr"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-Tg-fj8">
-                                <rect key="frame" x="98" y="533.66666666666663" width="200" height="35"/>
+                                <rect key="frame" x="98" y="528.66666666666663" width="200" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CONTINUAR">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
