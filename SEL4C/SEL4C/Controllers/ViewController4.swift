@@ -28,7 +28,7 @@ class ViewController4: UIViewController, UITextFieldDelegate {
         } else {
             print("No entrepreneur instance received.")
         }
-                configureButton(button: generoButton, options: ["Masculino", "Femenino"])
+                configureButton(button: generoButton, options: ["Masculino", "Femenino","No Binario","Prefiero no decir"])
             
                 configureButton(button: paisButton, options: ["México", "EEUU", "Canadá"])
                 

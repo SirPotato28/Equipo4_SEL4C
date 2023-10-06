@@ -1816,6 +1816,7 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="AYf-Vi-LQH" firstAttribute="leading" secondItem="i78-HN-GsF" secondAttribute="leading" id="0E7-G3-Ngp"/>
                                             <constraint firstAttribute="trailing" secondItem="BJG-xO-koX" secondAttribute="trailing" id="7Pg-Jy-pTn"/>
@@ -2023,6 +2024,9 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                 <buttonConfiguration key="configuration" style="filled" title="Empezar Cuestionario">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="hpO-NJ-WGG" kind="show" id="hwl-5Y-t41"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wta-se-m6l"/>
@@ -2112,6 +2116,9 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                 <buttonConfiguration key="configuration" style="filled" title="Empezar Cuestionario">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="jjN-0v-4Om" kind="show" id="HE4-ba-1SY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8xh-Af-PYa"/>
@@ -2201,6 +2208,9 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                 <buttonConfiguration key="configuration" style="filled" title="Empezar Cuestionario">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="uHR-IY-i8m" kind="show" id="8XT-oV-hRP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SnO-md-NG2"/>
@@ -2290,6 +2300,9 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                 <buttonConfiguration key="configuration" style="filled" title="Empezar Cuestionario">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="0oV-3S-fMP" kind="show" id="vPV-Af-oIO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dtX-sm-RFB"/>
@@ -2420,7 +2433,7 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fpi-6y-w44">
-                                <rect key="frame" x="0.0" y="59" width="393" height="741"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="697"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 27" translatesAutoresizingMaskIntoConstraints="NO" id="jo0-40-hai">
                                         <rect key="frame" x="-16" y="-82" width="409" height="1225"/>
@@ -2522,11 +2535,12 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                             <constraint firstItem="Fpi-6y-w44" firstAttribute="trailing" secondItem="pev-jy-qLP" secondAttribute="trailing" id="mbb-Fm-qRQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XR0-jh-Fe2"/>
                     <size key="freeformSize" width="393" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKB-6N-PUV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2725.9541984732823" y="929.57746478873241"/>
+            <point key="canvasLocation" x="7466" y="-2139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Zl2-hN-sqs">
@@ -2541,7 +2555,7 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpb-ai-lrL">
-                                <rect key="frame" x="0.0" y="59" width="393" height="741"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="697"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 27" translatesAutoresizingMaskIntoConstraints="NO" id="ZL0-Et-NyT">
                                         <rect key="frame" x="-16" y="-82" width="409" height="1225"/>
@@ -2654,11 +2668,12 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
                             <constraint firstItem="fpb-ai-lrL" firstAttribute="top" secondItem="mug-cc-6Ie" secondAttribute="top" id="bgl-Te-P6j"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ijk-fh-gOd"/>
                     <size key="freeformSize" width="393" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v59-nL-yzJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1993" y="930"/>
+            <point key="canvasLocation" x="7050" y="-1466"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Qb3-mp-yLA">
@@ -2673,7 +2688,7 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EK-hP-VNk">
-                                <rect key="frame" x="0.0" y="59" width="393" height="741"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="697"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 27" translatesAutoresizingMaskIntoConstraints="NO" id="Ykm-RB-myk">
                                         <rect key="frame" x="-16" y="-82" width="409" height="1225"/>
@@ -2771,11 +2786,12 @@ Como cierre de este proceso de ideación deberías poder identificar una acción
                             <constraint firstItem="8EK-hP-VNk" firstAttribute="trailing" secondItem="71a-6W-LAt" secondAttribute="trailing" id="zxg-xp-J3x"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8oQ-wu-BWV"/>
                     <size key="freeformSize" width="393" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q0N-YZ-8Ra" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1276" y="930"/>
+            <point key="canvasLocation" x="7137" y="-700"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Nt6-NV-5bC">
@@ -2790,7 +2806,7 @@ Como cierre de este proceso de ideación deberías poder identificar una acción
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPU-ix-YPy">
-                                <rect key="frame" x="0.0" y="59" width="393" height="741"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="697"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 27" translatesAutoresizingMaskIntoConstraints="NO" id="Src-Lk-D5b">
                                         <rect key="frame" x="-16" y="-82" width="409" height="1225"/>
@@ -2881,16 +2897,17 @@ Deberás recabar esta información de tu entrevistado y hacer adecuaciones a tu 
                             <constraint firstAttribute="bottom" secondItem="zPU-ix-YPy" secondAttribute="bottom" id="vAp-Ai-ZzW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2H3-NK-cAh"/>
                     <size key="freeformSize" width="393" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1H-s9-nk1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-553" y="930"/>
+            <point key="canvasLocation" x="7050" y="144"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Llr-Ow-JLz"/>
-        <segue reference="vKG-Us-bVq"/>
+        <segue reference="XRK-EL-WLC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Component 1Bar" width="355" height="34"/>

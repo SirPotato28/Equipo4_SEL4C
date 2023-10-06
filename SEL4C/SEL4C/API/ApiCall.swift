@@ -27,7 +27,7 @@ class APICall {
         let formDataEncoded = formData.data(using: .utf8)
         
         // Make a request to the Django API to obtain a token
-        let tokenURL = URL(string: "http://127.0.0.1:8000/api/token/")!
+        let tokenURL = URL(string: "http://20.127.17.215/api/token/")!
         var tokenRequest = URLRequest(url: tokenURL)
         tokenRequest.httpMethod = "POST"
         tokenRequest.httpBody = formDataEncoded
@@ -74,8 +74,8 @@ class APICall {
     
     func getEntrepreneur(email: String) async -> Entrepreneur? {
         let accessToken = await getToken()
-        let getUserURL = URL(string: "http://127.0.0.1:8000/api-root/entrepreneurs/?email=\(email)&format=json")
-        print("http://127.0.0.1:8000/api-root/entrepreneurs/?email=\(email)&format=json")
+        let getUserURL = URL(string: "http://20.127.17.215/api-root/entrepreneurs/?email=\(email)&format=json")
+        print("http://20.127.17.215/api-root/entrepreneurs/?email=\(email)&format=json")
         
         do {
             let (data, response) = try await URLSession.shared.data(from: getUserURL!)
@@ -111,7 +111,7 @@ class APICall {
     
     func addEntrepreneur(newEntrepreneur: Data) async throws -> NewEntrepreneur? {
         let accessToken =  await getToken()
-        let addUserURL = URL(string: "http://127.0.0.1:8000/api-root/entrepreneurs/")
+        let addUserURL = URL(string: "http://20.127.17.215/api-root/entrepreneurs/")
         
         var request = URLRequest(url: addUserURL!)
         request.httpMethod = "POST"
@@ -161,7 +161,7 @@ class APICall {
         
             
         // Now use the obtained token for your API request
-        let baseString = "http://127.0.0.1:8000/api-root/questions/?format=json"
+        let baseString = "http://20.127.17.215/api-root/questions/?format=json"
         let questionsURL = URL(string: baseString)!
         
         var request = URLRequest(url: questionsURL)
