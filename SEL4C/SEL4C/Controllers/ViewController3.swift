@@ -9,10 +9,12 @@ import UIKit
 
 class ViewController3: UIViewController {
     
+    @IBOutlet weak var Siguieteview: UIButton!
     var newEntrepreneur: NewEntrepreneur?
     @IBOutlet weak var PassWord: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        Siguieteview.isEnabled = false
         if let newEntrepreneur = newEntrepreneur {
                 print("Received entrepreneur instance: \(newEntrepreneur)")
             } else {
@@ -20,6 +22,7 @@ class ViewController3: UIViewController {
             }
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var PassWord2: UITextField!
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DataView" {
             if let nextViewController = segue.destination as? ViewController4 {
@@ -34,6 +37,11 @@ class ViewController3: UIViewController {
     
     
     
+    @IBAction func ConfirmPassword(_ sender: UIButton) {
+        if PassWord2.text == PassWord.text{
+            Siguieteview.isEnabled = true
+        }
+    }
     
 
     /*

@@ -22,7 +22,7 @@ struct EcomplexityEngine{
     func getQuestionNum()->Int{
         return questions[questionIndex].question_num
     }
-    func getQuestionActivity()->String{
+    func getQuestionActivity()->Int{
         return questions[questionIndex].activity
     }
     func getProgress()->Float{

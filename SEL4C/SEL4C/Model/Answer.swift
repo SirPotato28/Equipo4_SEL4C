@@ -9,6 +9,7 @@ import Foundation
 struct Answer:Codable{
     var question:Question
     var answer:Int
+    var Entrepreneur: Int
 }
 
 typealias Answers = [Answer]

@@ -27,14 +27,22 @@ class ViewControllerActividadInicial: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         Task {
-            do {
-                let apiCall = APICall()
-                let questions = try await apiCall.fetchQuestions()
-                updateUI(with: questions)
-            } catch {
-                displayError(QuestionError.itemNotFound, title: "No se pudo acceder a las preguntas")
+                do {
+                    let apiCall = APICall()
+                    let questions = try await apiCall.fetchQuestions(activity_id: 1)
+                    
+                    if questions.isEmpty {
+                        // Mostrar un mensaje de error si no hay preguntas disponibles
+                        displayError(QuestionError.itemNotFound, title: "No se encontraron preguntas")
+                    } else {
+                        // Actualizar la interfaz si se obtuvieron preguntas
+                        updateUI(with: questions)
+                    }
+                } catch {
+                    // Mostrar un mensaje de error en caso de una excepción
+                    displayError(QuestionError.itemNotFound, title: "No se pudo acceder a las preguntas")
+                }
             }
-        }
         
     }
     func updateUI(with questions:Questions){
@@ -57,7 +65,7 @@ class ViewControllerActividadInicial: UIViewController {
     @IBAction func userAnswer(_ sender: UIButton) {
         let answer = sender.titleLabel?.text
         let question = Question(id: engine.getId(), question_num: engine.getQuestionNum(),activity: engine.getQuestionActivity(),description: engine.getQuestionDescription())
-        var ans = Answer(question: question, answer: 0)
+        var ans = Answer(question: question, answer: 0, Entrepreneur: 1)
         switch answer!{
         case let str where str.contains("Nada de acuerdo"):
             ans.answer = 1

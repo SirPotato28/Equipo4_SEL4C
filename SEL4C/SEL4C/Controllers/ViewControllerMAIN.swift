@@ -115,8 +115,8 @@ class ViewControllerMAIN: UIViewController {
                                     let hashedEnteredPassword = hashedEnteredPasswordData.base64EncodedString()
                                     // Luego puedes comparar hashedEnteredPassword con storedHash
                                     if hashedEnteredPassword == storedHash {
-                                        // Las credenciales son válidas
                                         print("Usuario encontrado")
+                                        SessionManager.shared.setCurrentUser(entrepreneur)
                                         print(algorithm)
                                         print(iterations)
                                         print(salt)

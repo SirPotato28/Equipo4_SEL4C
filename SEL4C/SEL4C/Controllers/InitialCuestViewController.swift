@@ -6,79 +6,217 @@
 //
 
 import UIKit
-
+private var sliderValues: [Int] = []
 class InitialCuestViewController: UIViewController {
+    var questions: [Question] = []
+    var answersArray: [[String: Any]] = []
+
     let slider = UISlider()
-    
+    var engine = EcomplexityEngine()
+    var userResponses = UserResponses()
+    var userResponsesController = UserResponsesController()
+    private var questionsText: [String] = []
+
     private let CuadroPregunta: UIStackView = {
         let stackview = UIStackView()
         stackview.translatesAutoresizingMaskIntoConstraints = false
         stackview.axis = .vertical
         return stackview
-        
     }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(CuadroPregunta)
-        // Do any additional setup after loading the view.
-        NSLayoutConstraint.activate([
-            CuadroPregunta.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-            CuadroPregunta.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            CuadroPregunta.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-            
-        ])
-        ["pregunta 1","pregunta2","pregunta3", "pregunta4","aaa"].forEach { pregunta in
-            let label = UILabel()
-            label.text = pregunta
-            label.textAlignment = .center
-            label.font = .systemFont(ofSize: 32)
-            
-            let slider = UISlider()
-            slider.minimumValue = 0.0
-            slider.maximumValue = 4.0
-            slider.value = 0.0
-            slider.isContinuous = true
-            slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
-            
-            let valueLabel = UILabel()
-                        valueLabel.text = "\(Int(slider.value))" // Inicialmente muestra el valor del slider
-                        valueLabel.textAlignment = .center
-            
-           
-            
-            
-            CuadroPregunta.addArrangedSubview(label)
-            
-            CuadroPregunta.addArrangedSubview(slider)
-            CuadroPregunta.addArrangedSubview(valueLabel)
-            
-        }
 
-        // Do any additional setup after loading the view.
-    }
-    
+        Task {
+            do {
+                
+                let apiCall = APICall()
+                let response = try await apiCall.fetchQuestions(activity_id: 1)//act hardcodeada
+                questions = response
+                print(questions)
+                self.questionsText = response.map { $0.description }
+                // 1. Agrega un fondo
+                       let backgroundImageView = UIImageView(image: UIImage(named: "Rectangle 27")) // Reemplaza "nombre_de_la_imagen_en_assets" con el nombre de tu imagen en los assets
+                       view.addSubview(backgroundImageView)
+                       backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+                       NSLayoutConstraint.activate([
+                           backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
+                           backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                           backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                           backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                           
+                       ])
+                       
+                       // 2. Agrega un título "Preguntas Iniciales"
+                       let titleLabel = UILabel()
+                       titleLabel.text = "Preguntas Iniciales"
+                       titleLabel.textAlignment = .center
+                       titleLabel.font = .systemFont(ofSize: 36)
+                       titleLabel.textColor = UIColor.white // Cambia el color del texto del título aquí
+                       view.addSubview(titleLabel)
+                       titleLabel.translatesAutoresizingMaskIntoConstraints = false
+                       NSLayoutConstraint.activate([
+                           titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+                           titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                           titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+                       ])
+                       
+                       // 3. Agrega una ScrollView para el contenido desplazable
+                       let scrollView = UIScrollView()
+                       view.addSubview(scrollView)
+                       scrollView.translatesAutoresizingMaskIntoConstraints = false
+                       NSLayoutConstraint.activate([
+                           scrollView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
+                           scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                           scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                           scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                       ])
+                       
+                       // 4. Agrega el CuadroPregunta al ScrollView
+                       scrollView.addSubview(CuadroPregunta)
+                       NSLayoutConstraint.activate([
+                           CuadroPregunta.topAnchor.constraint(equalTo: scrollView.topAnchor),
+                           CuadroPregunta.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+                           CuadroPregunta.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+                           CuadroPregunta.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+                           CuadroPregunta.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+                ])
 
-    /*
-    // MARK: - Navigation
+                questionsText.forEach { pregunta in
+                    let label = UILabel()
+                     label.text = pregunta
+                     label.textAlignment = .center
+                     label.font = .systemFont(ofSize: 32)
+                     label.textColor = UIColor.white // Cambia el color del texto de las etiquetas de pregunta a blanco
+                     
+                     let slider = UISlider()
+                     slider.minimumValue = 0.0
+                     slider.maximumValue = 4.0
+                     slider.value = 0.0
+                     slider.isContinuous = true
+                     slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
+                     
+                    let likertImageView = UIImageView(image: UIImage(named: "Likert"))
+                        likertImageView.contentMode = .scaleAspectFit
+                    
+                    
+                     // 5. Cambia el color del UISlider a blanco
+                     slider.minimumTrackTintColor = UIColor.white
+                     slider.maximumTrackTintColor = UIColor.white
+                     slider.thumbTintColor = UIColor.blue
+                     sliderValues.append(0)
+                     
+                     let valueLabel = UILabel()
+                     valueLabel.text = "\(Int(slider.value))"
+                     valueLabel.textAlignment = .center
+                     valueLabel.textColor = UIColor.white // Cambia el color del texto de las etiquetas de valor a blanco
+                     
+                     CuadroPregunta.addArrangedSubview(label)
+                     CuadroPregunta.addArrangedSubview(likertImageView)
+                     CuadroPregunta.addArrangedSubview(slider)
+                     CuadroPregunta.addArrangedSubview(valueLabel)
+                }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    @objc func sliderValueChanged(_ sender: UISlider) {
-        sender.value = roundf(sender.value) // Redondea el valor a un número entero
-        
-        // Encuentra la posición de la etiqueta del valor en el stack view
-        if let sliderIndex = CuadroPregunta.arrangedSubviews.firstIndex(of: sender) {
-            // Encuentra la etiqueta del valor correspondiente
-            let valueLabelIndex = sliderIndex + 1
-            if let valueLabel = CuadroPregunta.arrangedSubviews[valueLabelIndex] as? UILabel {
-                valueLabel.text = "\(Int(sender.value))" // Actualiza el valor de la etiqueta
+                // Agregar el botón de "Enviar" al final de las preguntas
+                let sendButton = UIButton(type: .system)
+                sendButton.setTitle("Enviar", for: .normal)
+                sendButton.titleLabel?.font = .boldSystemFont(ofSize: 24)
+                sendButton.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
+                CuadroPregunta.addArrangedSubview(sendButton)
+                
+                if self.questionsText.isEmpty {
+                    
+                    self.displayError(QuestionError.itemNotFound, title: "No se encontraron preguntas")
+                } else {
+                    // Actualizar la interfaz si se obtuvieron preguntas
+                    // self.updateUI(with: self.questions)
+                }
+            } catch {
+                self.displayError(QuestionError.itemNotFound, title: "No se pudo acceder a las preguntas")
             }
         }
     }
 
+    @objc func sliderValueChanged(_ sender: UISlider) {
+        sender.value = roundf(sender.value)
+        
+        if let sliderIndex = CuadroPregunta.arrangedSubviews.firstIndex(of: sender) {
+            let valueLabelIndex = sliderIndex + 1
+            if let valueLabel = CuadroPregunta.arrangedSubviews[valueLabelIndex] as? UILabel {
+                valueLabel.text = "\(Int(sender.value))"
+                
+                // Actualiza el valor en el array sliderValues
+                sliderValues[sliderIndex / 3] = Int(sender.value) // Suponiendo que hay 3 elementos por pregunta (label, slider y valueLabel)
+            }
+        }
+    }
+
+    @objc func sendButtonTapped() {
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.outputFormatting = .prettyPrinted
+        let networkService = APICall()
+
+        Task {
+            do {
+                var answersArray = [NewAnswer]() // Array para almacenar todas las respuestas
+                
+                for (index, value) in sliderValues.enumerated() {
+                    let newAnswer = NewAnswer(question: questions[index].id, answer: value, entrepreneur: SessionManager.shared.currentUser!.id)
+                    answersArray.append(newAnswer) // Agregar cada respuesta al array
+                }
+                
+                do {
+                    let answersDict = ["answers": answersArray] // Crear un diccionario que contiene el array de respuestas
+                    let encodeAnswers = try jsonEncoder.encode(answersDict)
+                    
+                    if let jsonString = String(data: encodeAnswers, encoding: .utf8) {
+                        print("JSON a enviar: \(jsonString)")
+                    }
+                    
+                    let apiCall = APICall()
+                    
+                    if let response = try await apiCall.addAnswers(newAnswer: encodeAnswers) {
+                        // Procesa la respuesta si es necesario
+                    } else {
+                        // Maneja el caso en el que no obtuviste una respuesta
+                    }
+                } catch {
+                    // Maneja el error de codificación de datos aquí
+                    print("Error al codificar 'answersDict': \(error)")
+                }
+            } catch {
+                // Maneja otros errores aquí
+                print("Otro error ocurrió: \(error)")
+            }
+        }
+               
+        
+        
+        
+       
+     
+        
+        // Luego, puedes usar sliderValues para enviar los valores al servidor o realizar otras acciones.
+        
+        let confirmationAlert = UIAlertController(title: "Respuestas enviadas", message: "Tus respuestas se han enviado correctamente.", preferredStyle: .alert)
+        confirmationAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(confirmationAlert, animated: true, completion: nil)
+    }
+
+
+    func updateUI(with questions: Questions) {
+        DispatchQueue.main.async {
+            self.engine.initialize(q: questions)
+            self.userResponses.user = "user@tec.mx"
+        }
+    }
+
+    func displayError(_ error: Error, title: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 }
+

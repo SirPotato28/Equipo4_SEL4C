@@ -3,7 +3,7 @@ import Foundation
 struct Question:Codable{
     let id:Int
     let question_num:Int
-    let activity:String
+    let activity:Int
     let description:String
     
 }

@@ -17,6 +17,12 @@
 		84787D6F2AC784410014C7AB /* ViewControllerInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84787D6E2AC784410014C7AB /* ViewControllerInicial.swift */; };
 		849A70112ACE1DBE00C6532A /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A70102ACE1DBE00C6532A /* AccessToken.swift */; };
 		849A70132ACE1EFC00C6532A /* Entrepreneur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A70122ACE1EFC00C6532A /* Entrepreneur.swift */; };
+		849EB2272AD0A53000B8EA66 /* ViewControllerVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EB2262AD0A53000B8EA66 /* ViewControllerVideo.swift */; };
+		849EB2292AD0B67800B8EA66 /* newAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EB2282AD0B67800B8EA66 /* newAnswer.swift */; };
+		849EB22C2AD0BB4900B8EA66 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EB22B2AD0BB4900B8EA66 /* SessionManager.swift */; };
+		849EB22E2AD0E4CD00B8EA66 /* ViewControllerAct1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EB22D2AD0E4CD00B8EA66 /* ViewControllerAct1.swift */; };
+		849EB2302AD0E56600B8EA66 /* ViewControllerAct2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EB22F2AD0E56600B8EA66 /* ViewControllerAct2.swift */; };
+		849EB2322AD0E57400B8EA66 /* ViewControllerAct3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EB2312AD0E57400B8EA66 /* ViewControllerAct3.swift */; };
 		84A35DC52ACB6E8B00F126D9 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A35DC42ACB6E8B00F126D9 /* Answer.swift */; };
 		84A35DC72ACB6EA400F126D9 /* UserResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A35DC62ACB6EA400F126D9 /* UserResponses.swift */; };
 		84A35DC92ACB6EBF00F126D9 /* UserResponsesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A35DC82ACB6EBF00F126D9 /* UserResponsesController.swift */; };
@@ -74,6 +80,12 @@
 		84787D6E2AC784410014C7AB /* ViewControllerInicial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInicial.swift; sourceTree = "<group>"; };
 		849A70102ACE1DBE00C6532A /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		849A70122ACE1EFC00C6532A /* Entrepreneur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrepreneur.swift; sourceTree = "<group>"; };
+		849EB2262AD0A53000B8EA66 /* ViewControllerVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerVideo.swift; sourceTree = "<group>"; };
+		849EB2282AD0B67800B8EA66 /* newAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newAnswer.swift; sourceTree = "<group>"; };
+		849EB22B2AD0BB4900B8EA66 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		849EB22D2AD0E4CD00B8EA66 /* ViewControllerAct1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAct1.swift; sourceTree = "<group>"; };
+		849EB22F2AD0E56600B8EA66 /* ViewControllerAct2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAct2.swift; sourceTree = "<group>"; };
+		849EB2312AD0E57400B8EA66 /* ViewControllerAct3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAct3.swift; sourceTree = "<group>"; };
 		84A35DC42ACB6E8B00F126D9 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		84A35DC62ACB6EA400F126D9 /* UserResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponses.swift; sourceTree = "<group>"; };
 		84A35DC82ACB6EBF00F126D9 /* UserResponsesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponsesController.swift; sourceTree = "<group>"; };
@@ -143,6 +155,7 @@
 				849A70102ACE1DBE00C6532A /* AccessToken.swift */,
 				849A70122ACE1EFC00C6532A /* Entrepreneur.swift */,
 				8428459F2ACF6A8E00F527BC /* newEntrepreneur.swift */,
+				849EB2282AD0B67800B8EA66 /* newAnswer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,8 +189,20 @@
 				84F396B02AC605450058417B /* SideMenuViewController.swift */,
 				84787D6E2AC784410014C7AB /* ViewControllerInicial.swift */,
 				BEC01FBB2A99BB590096DC77 /* ViewController.swift */,
+				849EB2262AD0A53000B8EA66 /* ViewControllerVideo.swift */,
+				849EB22D2AD0E4CD00B8EA66 /* ViewControllerAct1.swift */,
+				849EB22F2AD0E56600B8EA66 /* ViewControllerAct2.swift */,
+				849EB2312AD0E57400B8EA66 /* ViewControllerAct3.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		849EB22A2AD0BB3800B8EA66 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				849EB22B2AD0BB4900B8EA66 /* SessionManager.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		84EC78152ACF3847009F967A /* API */ = {
@@ -212,6 +237,7 @@
 		BEC01FB62A99BB590096DC77 /* SEL4C */ = {
 			isa = PBXGroup;
 			children = (
+				849EB22A2AD0BB3800B8EA66 /* Session */,
 				84EC78152ACF3847009F967A /* API */,
 				847B91752ACBA95D004C7AE1 /* Controllers */,
 				847B91742ACBA944004C7AE1 /* Views */,
@@ -375,10 +401,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC01FEA2A99C4860096DC77 /* ViewController3.swift in Sources */,
+				849EB2272AD0A53000B8EA66 /* ViewControllerVideo.swift in Sources */,
 				84F9E41E2AA25E1F00C7A947 /* ActViewController.swift in Sources */,
 				BEC01FEC2A99C7400096DC77 /* ViewController4.swift in Sources */,
+				849EB2292AD0B67800B8EA66 /* newAnswer.swift in Sources */,
 				84A35DCB2ACB70D600F126D9 /* User.swift in Sources */,
 				84B7D2292ACC904C00AA2507 /* InitialCuestViewController.swift in Sources */,
+				849EB22E2AD0E4CD00B8EA66 /* ViewControllerAct1.swift in Sources */,
 				84EC78172ACF3858009F967A /* ApiCall.swift in Sources */,
 				BEC01FBC2A99BB590096DC77 /* ViewController.swift in Sources */,
 				84F9E4202AA2614400C7A947 /* ViewControllerHamburger.swift in Sources */,
@@ -392,6 +421,7 @@
 				BEC01FF02A99CF9B0096DC77 /* ViewController5.swift in Sources */,
 				84D100BE2AA7EDD700704C17 /* ViewController9.swift in Sources */,
 				BEC01FE82A99C0740096DC77 /* ViewController2.swift in Sources */,
+				849EB2322AD0E57400B8EA66 /* ViewControllerAct3.swift in Sources */,
 				BEC01FF22A99D1840096DC77 /* ViewController6.swift in Sources */,
 				84787D6D2AC7777F0014C7AB /* Question.swift in Sources */,
 				BEC01FB82A99BB590096DC77 /* AppDelegate.swift in Sources */,
@@ -399,11 +429,13 @@
 				849A70112ACE1DBE00C6532A /* AccessToken.swift in Sources */,
 				84787D6B2AC7776A0014C7AB /* EcomplexityEngine.swift in Sources */,
 				844754D22AA79D1700EAB2B6 /* SideMenu.swift in Sources */,
+				849EB2302AD0E56600B8EA66 /* ViewControllerAct2.swift in Sources */,
 				BE0CD2EA2AA011BB00BE1E7E /* ViewController8.swift in Sources */,
 				849A70132ACE1EFC00C6532A /* Entrepreneur.swift in Sources */,
 				84787D6F2AC784410014C7AB /* ViewControllerInicial.swift in Sources */,
 				84F396B12AC605450058417B /* SideMenuViewController.swift in Sources */,
 				BEC01FBA2A99BB590096DC77 /* SceneDelegate.swift in Sources */,
+				849EB22C2AD0BB4900B8EA66 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

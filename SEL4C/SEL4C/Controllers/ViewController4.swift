@@ -21,6 +21,8 @@ class ViewController4: UIViewController, UITextFieldDelegate {
     @IBOutlet private weak var apellido: UITextField!
     @IBOutlet private weak var edad: UITextField!
     
+    var countryNames: [String] = [] // Array para almacenar los nombres de los países
+    
     override func viewDidLoad() {
                 super.viewDidLoad()
         if let newEntrepreneur = newEntrepreneur {
@@ -30,7 +32,7 @@ class ViewController4: UIViewController, UITextFieldDelegate {
         }
                 configureButton(button: generoButton, options: ["Masculino", "Femenino","No binario", "Prefiero no decir"])
             
-                configureButton(button: paisButton, options: ["México", "EEUU", "Canadá"])
+        loadCountryNamesFromCSV()
                 
             configureButton(button: gacademicButton, options: ["Secundaria", "Preparatoria", "Universidad"])
             
@@ -60,6 +62,43 @@ class ViewController4: UIViewController, UITextFieldDelegate {
             
             private func printSelectedOption(_ option: String) {
                 print("Opción seleccionada: \(option)")
+            }
+    
+    private func loadCountryNamesFromCSV() {
+                if let url = URL(string: "https://gist.githubusercontent.com/brenes/1095110/raw/4422fd7ba3a388f31a9a017757e21e5df23c5916/paises.csv") {
+                    do {
+                        let csvString = try String(contentsOf: url, encoding: .utf8)
+                        
+                        // Parsear el CSV para obtener los nombres de los países
+                        parseCountryNames(csvString)
+                    } catch {
+                        print("Error al cargar los nombres de los países: \(error)")
+                    }
+                }
+            }
+            
+            private func parseCountryNames(_ csvString: String) {
+                let lines = csvString.components(separatedBy: "\n")
+                    
+                    for (index, line) in lines.enumerated() {
+                        // Omitir la primera línea (encabezado)
+                        if index == 0 {
+                            continue
+                        }
+                        
+                        let components = line.components(separatedBy: ",")
+                        if components.count >= 3 {
+                            var name = components[1].trimmingCharacters(in: .whitespacesAndNewlines)
+                            // Verificar si el nombre comienza y termina con comillas y eliminarlas
+                            if name.hasPrefix("\"") && name.hasSuffix("\"") {
+                                name = String(name.dropFirst().dropLast())
+                            }
+                            countryNames.append(name)
+                        }
+                    }
+                
+                // Configurar el botón de países con los nombres obtenidos
+                configureButton(button: paisButton, options: countryNames)
             }
         
         func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

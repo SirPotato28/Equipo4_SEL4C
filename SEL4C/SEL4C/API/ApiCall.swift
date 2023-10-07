@@ -155,13 +155,13 @@ class APICall {
         return entrepreneur!
     }
     
-    func fetchQuestions() async throws -> Questions {
+    func fetchQuestions(activity_id: Int) async throws -> Questions {
 
         let accessToken = await getToken()
         
             
         // Now use the obtained token for your API request
-        let baseString = "http://127.0.0.1:8000/api-root/questions/?format=json"
+        let baseString = "http://127.0.0.1:8000/api-root/questions/?activity=\(activity_id)&format=json"
         let questionsURL = URL(string: baseString)!
         
         var request = URLRequest(url: questionsURL)
@@ -186,6 +186,33 @@ class APICall {
         let jsonDecoder = JSONDecoder()
         let questions = try jsonDecoder.decode(Questions.self, from: data)
         return questions
+    }
+    
+    func addAnswers(newAnswer: Data) async throws -> NewAnswer? {
+        let accessToken =  await getToken()
+        let addAnswerURL = URL(string: "http://127.0.0.1:8000/api/answers/create-multiple/")
+        
+        var request = URLRequest(url: addAnswerURL!)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        request.httpBody = newAnswer
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                print("HTTP Status Code: \(httpResponse.statusCode)")
+            }
+            
+            let jsonDecoder = JSONDecoder()
+            let newAnswer = try? jsonDecoder.decode(NewAnswer.self, from: data)
+            return newAnswer
+        } catch {
+            print("Error: \(error)")
+            return nil // Maneja el error y devuelve un valor nulo en caso de error
+        }
     }
 }
 
