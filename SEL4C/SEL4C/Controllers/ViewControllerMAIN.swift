@@ -7,7 +7,20 @@
 
 import UIKit
 import CommonCrypto
-
+class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.5 // Duración de la animación en segundos
+    }
+    
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        // Define tu animación personalizada aquí
+        // Usa transitionContext para obtener las vistas de origen y destino
+        // y realiza la animación deseada
+        
+        // Al finalizar la animación, llama a:
+        transitionContext.completeTransition(true)
+    }
+}
 extension Data {
     func pbkdf2SHA256(password: String, salt: Data, iterations: Int, keyLength: Int) -> Data? {
         var derivedKey = [UInt8](repeating: 0, count: keyLength)
@@ -128,9 +141,13 @@ class ViewControllerMAIN: UIViewController {
                                             DispatchQueue.main.async {
                                                 // Realiza la transición al UITabBarController
                                                 if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") {
-                                                    let navigationController = UINavigationController(rootViewController: homeVC)
-                                                    UIApplication.shared.windows.first?.rootViewController = navigationController
-                                                    UIApplication.shared.windows.first?.makeKeyAndVisible()
+                                                    UIView.transition(with: UIApplication.shared.windows.first!,
+                                                                      duration: 0.5,
+                                                                      options: .transitionFlipFromRight,
+                                                                      animations: {
+                                                                          UIApplication.shared.windows.first?.rootViewController = homeVC
+                                                                      },
+                                                                      completion: nil)
                                                 }
                                             }
                                             return

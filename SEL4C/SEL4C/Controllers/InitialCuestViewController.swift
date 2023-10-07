@@ -1,12 +1,7 @@
-//
-//  InitialCuestViewController.swift
-//  SEL4C
-//
-//  Created by Usuario on 03/10/23.
-//
-
 import UIKit
+
 private var sliderValues: [Int] = []
+
 class InitialCuestViewController: UIViewController {
     var questions: [Question] = []
     var answersArray: [[String: Any]] = []
@@ -29,92 +24,90 @@ class InitialCuestViewController: UIViewController {
 
         Task {
             do {
-                
                 let apiCall = APICall()
-                let response = try await apiCall.fetchQuestions(activity_id: 1)//act hardcodeada
+                let response = try await apiCall.fetchQuestions(activity_id: 1) //act hardcodeada
                 questions = response
-                print(questions)
                 self.questionsText = response.map { $0.description }
-                // 1. Agrega un fondo
-                       let backgroundImageView = UIImageView(image: UIImage(named: "Rectangle 27")) // Reemplaza "nombre_de_la_imagen_en_assets" con el nombre de tu imagen en los assets
-                       view.addSubview(backgroundImageView)
-                       backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-                       NSLayoutConstraint.activate([
-                           backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
-                           backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                           backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                           backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-                           
-                       ])
-                       
-                       // 2. Agrega un título "Preguntas Iniciales"
-                       let titleLabel = UILabel()
-                       titleLabel.text = "Preguntas Iniciales"
-                       titleLabel.textAlignment = .center
-                       titleLabel.font = .systemFont(ofSize: 36)
-                       titleLabel.textColor = UIColor.white // Cambia el color del texto del título aquí
-                       view.addSubview(titleLabel)
-                       titleLabel.translatesAutoresizingMaskIntoConstraints = false
-                       NSLayoutConstraint.activate([
-                           titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-                           titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                           titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-                       ])
-                       
-                       // 3. Agrega una ScrollView para el contenido desplazable
-                       let scrollView = UIScrollView()
-                       view.addSubview(scrollView)
-                       scrollView.translatesAutoresizingMaskIntoConstraints = false
-                       NSLayoutConstraint.activate([
-                           scrollView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
-                           scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                           scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                           scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-                       ])
-                       
-                       // 4. Agrega el CuadroPregunta al ScrollView
-                       scrollView.addSubview(CuadroPregunta)
-                       NSLayoutConstraint.activate([
-                           CuadroPregunta.topAnchor.constraint(equalTo: scrollView.topAnchor),
-                           CuadroPregunta.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-                           CuadroPregunta.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-                           CuadroPregunta.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-                           CuadroPregunta.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+
+                // Agrega un fondo
+                let backgroundImageView = UIImageView(image: UIImage(named: "Rectangle 27"))
+                view.addSubview(backgroundImageView)
+                backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
+                    backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                    backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                    backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
                 ])
 
-                questionsText.forEach { pregunta in
+                // Agrega un título "Preguntas Iniciales"
+                let titleLabel = UILabel()
+                titleLabel.text = "Preguntas Iniciales"
+                titleLabel.textAlignment = .center
+                titleLabel.font = .systemFont(ofSize: 36)
+                titleLabel.textColor = UIColor.white
+                view.addSubview(titleLabel)
+                titleLabel.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+                    titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                    titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+                ])
+
+                // Agrega una ScrollView para el contenido desplazable
+                let scrollView = UIScrollView()
+                view.addSubview(scrollView)
+                scrollView.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    scrollView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
+                    scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                    scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                    scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                ])
+
+                // Agrega el CuadroPregunta al ScrollView
+                scrollView.addSubview(CuadroPregunta)
+                NSLayoutConstraint.activate([
+                    CuadroPregunta.topAnchor.constraint(equalTo: scrollView.topAnchor),
+                    CuadroPregunta.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+                    CuadroPregunta.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+                    CuadroPregunta.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+                    CuadroPregunta.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+                ])
+
+                for pregunta in questionsText {
                     let label = UILabel()
-                     label.text = pregunta
-                     label.textAlignment = .center
-                     label.font = .systemFont(ofSize: 32)
-                     label.textColor = UIColor.white // Cambia el color del texto de las etiquetas de pregunta a blanco
-                     
-                     let slider = UISlider()
-                     slider.minimumValue = 0.0
-                     slider.maximumValue = 4.0
-                     slider.value = 0.0
-                     slider.isContinuous = true
-                     slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
-                     
+                    label.text = pregunta
+                    label.textAlignment = .left
+                    label.font = .boldSystemFont(ofSize: 20) // Cambia el tamaño de la fuente
+                    label.textColor = UIColor.white // Cambia el color del texto a blanco
+                    label.numberOfLines = 0 // Permite múltiples líneas para preguntas largas
+                    label.minimumScaleFactor = 0.5
+
+                    let slider = UISlider()
+                    slider.minimumValue = 0.0
+                    slider.maximumValue = 4.0
+                    slider.value = 0.0
+                    slider.isContinuous = true
+                    slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
+
                     let likertImageView = UIImageView(image: UIImage(named: "Likert"))
-                        likertImageView.contentMode = .scaleAspectFit
-                    
-                    
-                     // 5. Cambia el color del UISlider a blanco
-                     slider.minimumTrackTintColor = UIColor.white
-                     slider.maximumTrackTintColor = UIColor.white
-                     slider.thumbTintColor = UIColor.blue
-                     sliderValues.append(0)
-                     
-                     let valueLabel = UILabel()
-                     valueLabel.text = "\(Int(slider.value))"
-                     valueLabel.textAlignment = .center
-                     valueLabel.textColor = UIColor.white // Cambia el color del texto de las etiquetas de valor a blanco
-                     
-                     CuadroPregunta.addArrangedSubview(label)
-                     CuadroPregunta.addArrangedSubview(likertImageView)
-                     CuadroPregunta.addArrangedSubview(slider)
-                     CuadroPregunta.addArrangedSubview(valueLabel)
+                    likertImageView.contentMode = .scaleAspectFit
+
+                    slider.minimumTrackTintColor = UIColor.blue
+                    slider.maximumTrackTintColor = UIColor.lightGray
+                    slider.thumbTintColor = UIColor.blue
+                    sliderValues.append(0)
+
+                    let valueLabel = UILabel()
+                    valueLabel.text = "\(Int(slider.value))"
+                    valueLabel.textAlignment = .center
+                    valueLabel.textColor = UIColor.white // Cambia el color del texto a blanco
+
+                    CuadroPregunta.addArrangedSubview(label)
+                    CuadroPregunta.addArrangedSubview(likertImageView)
+                    CuadroPregunta.addArrangedSubview(slider)
+                    CuadroPregunta.addArrangedSubview(valueLabel)
                 }
 
                 // Agregar el botón de "Enviar" al final de las preguntas
@@ -123,9 +116,8 @@ class InitialCuestViewController: UIViewController {
                 sendButton.titleLabel?.font = .boldSystemFont(ofSize: 24)
                 sendButton.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
                 CuadroPregunta.addArrangedSubview(sendButton)
-                
+
                 if self.questionsText.isEmpty {
-                    
                     self.displayError(QuestionError.itemNotFound, title: "No se encontraron preguntas")
                 } else {
                     // Actualizar la interfaz si se obtuvieron preguntas
@@ -139,14 +131,12 @@ class InitialCuestViewController: UIViewController {
 
     @objc func sliderValueChanged(_ sender: UISlider) {
         sender.value = roundf(sender.value)
-        
+
         if let sliderIndex = CuadroPregunta.arrangedSubviews.firstIndex(of: sender) {
             let valueLabelIndex = sliderIndex + 1
             if let valueLabel = CuadroPregunta.arrangedSubviews[valueLabelIndex] as? UILabel {
                 valueLabel.text = "\(Int(sender.value))"
-                
-                // Actualiza el valor en el array sliderValues
-                sliderValues[sliderIndex / 3] = Int(sender.value) // Suponiendo que hay 3 elementos por pregunta (label, slider y valueLabel)
+                sliderValues[sliderIndex / 4] = Int(sender.value)
             }
         }
     }
@@ -158,15 +148,15 @@ class InitialCuestViewController: UIViewController {
 
         Task {
             do {
-                var answersArray = [NewAnswer]() // Array para almacenar todas las respuestas
+                var answersArray = [NewAnswer]()
                 
                 for (index, value) in sliderValues.enumerated() {
                     let newAnswer = NewAnswer(question: questions[index].id, answer: value, entrepreneur: SessionManager.shared.currentUser!.id)
-                    answersArray.append(newAnswer) // Agregar cada respuesta al array
+                    answersArray.append(newAnswer)
                 }
                 
                 do {
-                    let answersDict = ["answers": answersArray] // Crear un diccionario que contiene el array de respuestas
+                    let answersDict = ["answers": answersArray]
                     let encodeAnswers = try jsonEncoder.encode(answersDict)
                     
                     if let jsonString = String(data: encodeAnswers, encoding: .utf8) {
@@ -189,20 +179,11 @@ class InitialCuestViewController: UIViewController {
                 print("Otro error ocurrió: \(error)")
             }
         }
-               
-        
-        
-        
-       
-     
-        
-        // Luego, puedes usar sliderValues para enviar los valores al servidor o realizar otras acciones.
-        
+
         let confirmationAlert = UIAlertController(title: "Respuestas enviadas", message: "Tus respuestas se han enviado correctamente.", preferredStyle: .alert)
         confirmationAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(confirmationAlert, animated: true, completion: nil)
     }
-
 
     func updateUI(with questions: Questions) {
         DispatchQueue.main.async {
@@ -219,4 +200,3 @@ class InitialCuestViewController: UIViewController {
         }
     }
 }
-
