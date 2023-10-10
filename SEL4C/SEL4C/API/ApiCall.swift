@@ -27,7 +27,7 @@ class APICall {
         let formDataEncoded = formData.data(using: .utf8)
         
         // Make a request to the Django API to obtain a token: 20.127.17.215
-        let tokenURL = URL(string: "http://127.0.0.1:8000/api/token/")!
+        let tokenURL = URL(string: "http://20.127.17.215/api/token/")!
         var tokenRequest = URLRequest(url: tokenURL)
         tokenRequest.httpMethod = "POST"
         tokenRequest.httpBody = formDataEncoded
@@ -74,8 +74,8 @@ class APICall {
     
     func getEntrepreneur(email: String) async -> Entrepreneur? {
         let accessToken = await getToken()
-        let getUserURL = URL(string: "http://127.0.0.1:8000/api-root/entrepreneurs/?email=\(email)&format=json")
-        print("http://127.0.0.1:8000/api-root/entrepreneurs/?email=\(email)&format=json")
+        let getUserURL = URL(string: "http://20.127.17.215/api-root/entrepreneurs/?email=\(email)&format=json")
+        print("http://20.127.17.215/api-root/entrepreneurs/?email=\(email)&format=json")
         
         do {
             let (data, response) = try await URLSession.shared.data(from: getUserURL!)
@@ -113,7 +113,7 @@ class APICall {
         
             
         // Now use the obtained token for your API request
-        let baseString = "http://127.0.0.1:8000/api-root/completed-acts/?entrepreneur=\(entrepreneur_id)&format=json"
+        let baseString = "http://20.127.17.215/api-root/completed-acts/?entrepreneur=\(entrepreneur_id)&format=json"
         let questionsURL = URL(string: baseString)!
         
         var request = URLRequest(url: questionsURL)
@@ -143,7 +143,7 @@ class APICall {
     
     func addEntrepreneur(newEntrepreneur: Data) async throws -> NewEntrepreneur? {
         let accessToken =  await getToken()
-        let addUserURL = URL(string: "http://127.0.0.1:8000/api-root/entrepreneurs/")
+        let addUserURL = URL(string: "http://20.127.17.215/api-root/entrepreneurs/")
         
         var request = URLRequest(url: addUserURL!)
         request.httpMethod = "POST"
@@ -162,6 +162,33 @@ class APICall {
             let jsonDecoder = JSONDecoder()
             let newEntrepreneur = try? jsonDecoder.decode(NewEntrepreneur.self, from: data)
             return newEntrepreneur
+        } catch {
+            print("Error: \(error)")
+            return nil // Maneja el error y devuelve un valor nulo en caso de error
+        }
+    }
+    
+    func addActivitiesCompleted(newActivityCompleted: Data) async throws -> ActivitiesCompleted? {
+        let accessToken =  await getToken()
+        let addUserURL = URL(string: "http://20.127.17.215/api-root/entrepreneurs/")
+        
+        var request = URLRequest(url: addUserURL!)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        request.httpBody = newActivityCompleted
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                print("HTTP Status Code: \(httpResponse.statusCode)")
+            }
+            
+            let jsonDecoder = JSONDecoder()
+            let newActivityCompleted = try? jsonDecoder.decode(ActivitiesCompleted.self, from: data)
+            return newActivityCompleted
         } catch {
             print("Error: \(error)")
             return nil // Maneja el error y devuelve un valor nulo en caso de error
@@ -193,7 +220,7 @@ class APICall {
         
             
         // Now use the obtained token for your API request
-        let baseString = "http://127.0.0.1:8000/api-root/questions/?activity=\(activity_id)&format=json"
+        let baseString = "http://20.127.17.215/api-root/questions/?activity=\(activity_id)&format=json"
         let questionsURL = URL(string: baseString)!
         
         var request = URLRequest(url: questionsURL)
@@ -222,7 +249,7 @@ class APICall {
     
     func addAnswers(newAnswer: Data) async throws -> NewAnswer? {
         let accessToken =  await getToken()
-        let addAnswerURL = URL(string: "http://127.0.0.1:8000/api/answers/create-multiple/")
+        let addAnswerURL = URL(string: "http://20.127.17.215/api/answers/create-multiple/")
         
         var request = URLRequest(url: addAnswerURL!)
         request.httpMethod = "POST"
@@ -246,5 +273,70 @@ class APICall {
             return nil // Maneja el error y devuelve un valor nulo en caso de error
         }
     }
+    
+    func uploadFileToServer(fileURL: URL, entrepreneurId: Int, activityId: Int, fileType: String) async {
+        // Obtener el token de acceso
+        let accessToken = await getToken()
+        
+        // Crear la URL del endpoint de la API
+        let uploadURL = URL(string: "http://20.127.17.215/api-root/files/")! // Cambia la URL según tu configuración
+        
+        // Crear una solicitud POST
+        var request = URLRequest(url: uploadURL)
+        request.httpMethod = "POST"
+        
+        // Configurar el encabezado de autorización
+        request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        
+        // Crear los datos del cuerpo de la solicitud
+        let boundary = "Boundary-\(UUID().uuidString)"
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        var body = Data()
+        
+        // Agregar campos de formulario
+        let params = [
+            "entrepreneur": "\(entrepreneurId)",
+            "activity": "\(activityId)",
+            "filetype": fileType
+        ]
+        
+        for (key, value) in params {
+            body.append("--\(boundary)\r\n".data(using: .utf8)!)
+            body.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".data(using: .utf8)!)
+            body.append("\(value)\r\n".data(using: .utf8)!)
+        }
+        
+        // Agregar archivo adjunto
+        body.append("--\(boundary)\r\n".data(using: .utf8)!)
+        body.append("Content-Disposition: form-data; name=\"file\"; filename=\"\(fileURL.lastPathComponent)\"\r\n".data(using: .utf8)!)
+        body.append("Content-Type: application/octet-stream\r\n\r\n".data(using: .utf8)!)
+        
+        if let fileData = try? Data(contentsOf: fileURL) {
+            body.append(fileData)
+            print("DEBUGG")
+        }
+        
+        
+        body.append("\r\n".data(using: .utf8)!)
+        body.append("--\(boundary)--\r\n".data(using: .utf8)!)
+        
+        // Establecer los datos del cuerpo en la solicitud
+        request.httpBody = body
+        
+        // Realizar la solicitud
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print("Error: \(error)")
+                // Manejar el error aquí
+            } else if let data = data {
+                let responseString = String(data: data, encoding: .utf8)
+                print("Response: \(responseString ?? "")")
+                // Manejar la respuesta aquí
+            }
+        }.resume()
+    }
+
+    
 }
 

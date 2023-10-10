@@ -11,6 +11,7 @@
 		842845A22AD4641000F527BC /* ActivitiesCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842845A12AD4641000F527BC /* ActivitiesCompleted.swift */; };
 		842845A92AD46E6700F527BC /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842845A82AD46E6700F527BC /* FinalViewController.swift */; };
 		842845AE2AD483D900F527BC /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842845AD2AD483D900F527BC /* Activity.swift */; };
+		842845B12AD4948500F527BC /* UploadFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842845B02AD4948500F527BC /* UploadFiles.swift */; };
 		8433DBBF2AA17FB6006B6FE8 /* ViewControllerA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433DBBE2AA17FB6006B6FE8 /* ViewControllerA.swift */; };
 		844754D22AA79D1700EAB2B6 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844754D12AA79D1700EAB2B6 /* SideMenu.swift */; };
 		846238E22AD1BE2B00225DC6 /* ViewControllerMapLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846238E12AD1BE2B00225DC6 /* ViewControllerMapLoc.swift */; };
@@ -80,6 +81,7 @@
 		842845A12AD4641000F527BC /* ActivitiesCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCompleted.swift; sourceTree = "<group>"; };
 		842845A82AD46E6700F527BC /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		842845AD2AD483D900F527BC /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		842845B02AD4948500F527BC /* UploadFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFiles.swift; sourceTree = "<group>"; };
 		8433DBBE2AA17FB6006B6FE8 /* ViewControllerA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerA.swift; sourceTree = "<group>"; };
 		844754D12AA79D1700EAB2B6 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		846238E12AD1BE2B00225DC6 /* ViewControllerMapLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMapLoc.swift; sourceTree = "<group>"; };
@@ -157,6 +159,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842845AF2AD4947600F527BC /* files */ = {
+			isa = PBXGroup;
+			children = (
+				842845B02AD4948500F527BC /* UploadFiles.swift */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
 		84787D692AC7773E0014C7AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +268,7 @@
 		BEC01FB62A99BB590096DC77 /* SEL4C */ = {
 			isa = PBXGroup;
 			children = (
+				842845AF2AD4947600F527BC /* files */,
 				849EB22A2AD0BB3800B8EA66 /* Session */,
 				84EC78152ACF3847009F967A /* API */,
 				847B91752ACBA95D004C7AE1 /* Controllers */,
@@ -453,6 +464,7 @@
 				849A70112ACE1DBE00C6532A /* AccessToken.swift in Sources */,
 				84787D6B2AC7776A0014C7AB /* EcomplexityEngine.swift in Sources */,
 				844754D22AA79D1700EAB2B6 /* SideMenu.swift in Sources */,
+				842845B12AD4948500F527BC /* UploadFiles.swift in Sources */,
 				846238EA2AD1CCF300225DC6 /* ViewControllerNada.swift in Sources */,
 				849EB2302AD0E56600B8EA66 /* ViewControllerAct2.swift in Sources */,
 				842845AE2AD483D900F527BC /* Activity.swift in Sources */,
@@ -641,6 +653,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7ZHKP64XF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SEL4C/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -648,7 +661,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -672,6 +685,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7ZHKP64XF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SEL4C/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -679,7 +693,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

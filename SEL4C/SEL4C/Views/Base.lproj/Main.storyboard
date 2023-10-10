@@ -394,7 +394,6 @@
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="ConfirmPassword:" destination="6HE-Iy-EV5" eventType="touchUpInside" id="UyB-pf-ghN"/>
                                     <segue destination="nQB-zF-Rxd" kind="show" identifier="DataView" id="R9x-Bi-YET"/>
                                 </connections>
                             </button>
@@ -448,9 +447,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="60M-UP-mYN"/>
                     <connections>
-                        <outlet property="PassWord" destination="TEs-t6-vSX" id="Uj5-PY-cC6"/>
-                        <outlet property="PassWord2" destination="TEs-t6-vSX" id="rye-k2-ZVb"/>
                         <outlet property="Siguieteview" destination="Jk2-jW-zLb" id="DGs-eI-vkZ"/>
+                        <outlet property="password1" destination="aW0-Ji-imP" id="3dS-ip-Rla"/>
+                        <outlet property="password2" destination="TEs-t6-vSX" id="jFl-vB-QDa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOX-Qc-hPn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -564,7 +563,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEL4C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dlr-Mh-JRO">
-                                <rect key="frame" x="264" y="29.999999999999996" width="92.666666666666686" height="34.666666666666657"/>
+                                <rect key="frame" x="264" y="30" width="92.666666666666686" height="34.666666666666657"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -3394,7 +3393,7 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XRK-EL-WLC"/>
+        <segue reference="vKG-Us-bVq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Component 1Bar" width="355" height="34"/>
