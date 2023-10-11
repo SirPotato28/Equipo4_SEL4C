@@ -61,6 +61,15 @@ class ViewControllerMAIN: UIViewController {
         
         // Do any additional setup after loading the view.
         passField.isSecureTextEntry = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+            
+            // Agregar el UITapGestureRecognizer a la vista principal
+            self.view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func handleTap() {
+        // Ocultar el teclado
+        view.endEditing(true)
     }
     
     func hashPassword(password: String, salt: String, iterations: Int) -> String? {

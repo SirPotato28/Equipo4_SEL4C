@@ -21,10 +21,17 @@ class ViewController4: UIViewController, UITextFieldDelegate {
     @IBOutlet private weak var apellido: UITextField!
     @IBOutlet private weak var edad: UITextField!
     
+    
+    @IBOutlet weak var siguienteview: UIButton!
+    
     var countryNames: [String] = [] // Array para almacenar los nombres de los países
     
     override func viewDidLoad() {
                 super.viewDidLoad()
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+            
+            // Agregar el UITapGestureRecognizer a la vista principal
+            self.view.addGestureRecognizer(tapGestureRecognizer)
         if let newEntrepreneur = newEntrepreneur {
             print("Received entrepreneur instance: \(newEntrepreneur)")
         } else {
@@ -46,6 +53,14 @@ class ViewController4: UIViewController, UITextFieldDelegate {
         edad.keyboardType = .numberPad
         
                 self.navigationController?.isToolbarHidden = false
+        
+        
+        siguienteview.isEnabled = false
+                
+                // Agrega controladores de eventos a los campos de texto
+                nombre.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+                apellido.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+                edad.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
             }
             
             private func configureButton(button: UIButton, options: [String]) {
@@ -151,5 +166,34 @@ class ViewController4: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    @objc func textFieldDidChange() {
+            // Verifica si los campos de texto y los botones contienen datos válidos
+            let isNombreValid = !(nombre.text?.isEmpty ?? true)
+            let isApellidoValid = !(apellido.text?.isEmpty ?? true)
+            let isEdadValid = isValidEdad(edad.text)
+            let isGeneroValid = !(generoButton.titleLabel?.text?.isEmpty ?? true)
+            let isPaisValid = !(paisButton.titleLabel?.text?.isEmpty ?? true)
+            let isGacademicValid = !(gacademicButton.titleLabel?.text?.isEmpty ?? true)
+            let isInstitucionValid = !(institucionButton.titleLabel?.text?.isEmpty ?? true)
+            let isDisciplinaValid = !(disciplinaButton.titleLabel?.text?.isEmpty ?? true)
+
+            // Habilita el botón si todos los campos son válidos
+            siguienteview.isEnabled = isNombreValid && isApellidoValid && isEdadValid &&
+                isGeneroValid && isPaisValid && isGacademicValid && isInstitucionValid && isDisciplinaValid
+        }
+
+        func isValidEdad(_ edadString: String?) -> Bool {
+            if let edadText = edadString, let edad = Int(edadText), (0...80).contains(edad) {
+                return true
+            }
+            return false
+        }
+    
+    
+    @objc func handleTap() {
+        // Ocultar el teclado
+        view.endEditing(true)
+    }
     
 }

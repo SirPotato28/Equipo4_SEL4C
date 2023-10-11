@@ -18,6 +18,12 @@ class ViewController3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+            
+            // Agregar el UITapGestureRecognizer a la vista principal
+            self.view.addGestureRecognizer(tapGestureRecognizer)
+        
         password1.isSecureTextEntry = true
         password2.isSecureTextEntry = true
         Siguieteview.isEnabled = false // Deshabilitar el botón al inicio
@@ -33,6 +39,11 @@ class ViewController3: UIViewController {
         
         password1.addTarget(self, action: #selector(passwordChanged), for: .editingChanged)
         password2.addTarget(self, action: #selector(passwordChanged), for: .editingChanged)
+    }
+    
+    @objc func handleTap() {
+        // Ocultar el teclado
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

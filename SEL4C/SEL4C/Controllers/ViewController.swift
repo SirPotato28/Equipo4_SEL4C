@@ -9,10 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var Siguieteview: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        Siguieteview.isEnabled = false
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+            
+            // Agregar el UITapGestureRecognizer a la vista principal
+            self.view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func handleTap() {
+        // Ocultar el teclado
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -26,6 +40,16 @@ class ViewController: UIViewController {
         }
     }
 
+    @objc func textFieldDidChange(_ textField: UITextField) {
+            if let email = emailTextField.text {
+                if email.contains("@") {
+                    Siguieteview.isEnabled = true // Habilita el botón si el "@" está presente
+                } else {
+                    Siguieteview.isEnabled = false // Deshabilita el botón si el "@" no está presente
+                }
+            }
+        }
+    
     @IBAction func AddEmail(_ sender: Any) {
         if let email = emailTextField.text {
 

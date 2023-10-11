@@ -43,7 +43,7 @@
                                 <rect key="frame" x="62" y="265" width="267" height="34"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPA-Dt-oB2">
                                 <rect key="frame" x="96" y="364" width="200" height="35"/>
@@ -100,6 +100,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zRz-sl-4y8"/>
                     <connections>
+                        <outlet property="Siguieteview" destination="TPA-Dt-oB2" id="nZb-Yk-urP"/>
                         <outlet property="emailTextField" destination="zwY-h5-Gxz" id="rC7-2c-hKW"/>
                     </connections>
                 </viewController>
@@ -137,7 +138,7 @@
                                 <rect key="frame" x="63" y="292.66666666666669" width="267" height="34"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="🦆 icon _envelope closed_" translatesAutoresizingMaskIntoConstraints="NO" id="pzM-Zp-587">
                                 <rect key="frame" x="73" y="300.66666666666669" width="24" height="18"/>
@@ -619,6 +620,7 @@
                         <outlet property="institucionButton" destination="hPL-U3-xFq" id="HhP-RQ-NTV"/>
                         <outlet property="nombre" destination="DsY-kj-8a8" id="HlL-Nc-zoF"/>
                         <outlet property="paisButton" destination="HQD-H6-l13" id="7Or-7O-mj0"/>
+                        <outlet property="siguienteview" destination="pUo-Kt-jAl" id="Bqa-xX-OYq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8DF-eM-CoE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3393,7 +3395,7 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XRK-EL-WLC"/>
+        <segue reference="Cfs-Qr-xHK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Component 1Bar" width="355" height="34"/>
