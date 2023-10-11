@@ -38,6 +38,13 @@ class ViewController7: UIViewController {
                     let response = try await apiCall.getActivitiesCompleted(entrepreneur_id: SessionManager.shared.currentUser!.id) //act hardcodeada
                     activities_completed = response
                     print(activities_completed)
+                    let arraBtn = [act1, act2, act3, act4, act5, cierre]
+                    let arraActC = activities_completed.count
+
+                    for i in 0..<arraActC {
+                        let button = arraBtn[i]
+                        button?.isEnabled = true
+                    }
                 } catch {
                     print("Error: \(error)")
                     displayError(ActivitiesCompletedError.invalidData, title: "Error al obtener actividades completadas")
@@ -48,14 +55,14 @@ class ViewController7: UIViewController {
         
         func setupButtons() {
             // Deshabilitar todos los botones excepto el inicial
-            /*
+            
             act1.isEnabled = false
             act2.isEnabled = false
             act3.isEnabled = false
             act4.isEnabled = false
             act5.isEnabled = false
             cierre.isEnabled = false
-            */
+            
             if botonPresionado {
                 
                 act1.isEnabled = true
@@ -112,32 +119,32 @@ class ViewController7: UIViewController {
         
     @IBAction func botonPresionado(_ sender: Any) {
         botonPresionado = true
-        setupButtons()
+    
     }
     
     @IBAction func botonPresionado2(_ sender: Any) {
         botonPresionado2 = true
-        setupButtons()
+        
     }
     
     @IBAction func botonPresionado3(_ sender: Any) {
         botonPresionado3 = true
-        setupButtons()
+    
     }
     
     @IBAction func botonPresionado4(_ sender: Any) {
         botonPresionado4 = true
-        setupButtons()
+        
     }
     
     @IBAction func botonPresionado5(_ sender: Any) {
         botonPresionado5 = true
-        setupButtons()
+        
     }
     
     @IBAction func botonPresionado6(_ sender: Any) {
         botonPresionado6 = true
-        setupButtons()
+        
     }
     
     func displayError(_ error: Error, title: String) {

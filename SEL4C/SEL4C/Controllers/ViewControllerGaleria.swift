@@ -40,12 +40,23 @@ class ViewControllerGaleria: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = selectedImage
-            
             // Obtiene la URL del archivo de la imagen seleccionada
             if let imageURL = info[UIImagePickerController.InfoKey.imageURL] as? URL {
                 // Realiza la llamada asíncrona dentro de una tarea asíncrona
                 Task {
-                    await APICall().uploadFileToServer(fileURL: imageURL, entrepreneurId: SessionManager.shared.currentUser!.id, activityId: 1, fileType: "image")
+                    let jsonEncoder = JSONEncoder()
+                    jsonEncoder.outputFormatting = .prettyPrinted
+                    await APICall().uploadFileToServer(fileURL: imageURL, entrepreneurId: SessionManager.shared.currentUser!.id, activityId: 2, fileType: "image")
+                    let newActivityCompleted = NewActivitiesCompleted(activity: 2, entrepreneur: SessionManager.shared.currentUser!.id)
+                    let encodeNewActivityCompleted = try jsonEncoder.encode(newActivityCompleted)
+                    if let jsonString = String(data: encodeNewActivityCompleted, encoding: .utf8) {
+                        print("JSON a enviar: \(jsonString)")
+                    }else{
+                     
+                    }
+                    if let response = try await APICall().addActivityCompleted(newActivityCompleted: encodeNewActivityCompleted){
+                        
+                    }
                 }
             }
         }

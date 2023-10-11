@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewControllerAct1: UIViewController, UIDocumentPickerDelegate {
+class ViewControllerAct1: UIViewController, UIDocumentPickerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var newActivityCompleted: ActivitiesCompleted?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,8 @@ class ViewControllerAct1: UIViewController, UIDocumentPickerDelegate {
     }
            
    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-           for url in urls {
+       print("Entrando a la función documetnPiker")
+       for url in urls {
                // Procesa los archivos seleccionados aquí (por ejemplo, subirlos a un servidor, guardarlos localmente, etc.)
                print("Archivo seleccionado: \(url.lastPathComponent)")
                let jsonEncoder = JSONEncoder()
@@ -37,24 +38,17 @@ class ViewControllerAct1: UIViewController, UIDocumentPickerDelegate {
                        let encodeNewActivityCompleted = try jsonEncoder.encode(newActivityCompleted)
                        if let jsonString = String(data: encodeNewActivityCompleted, encoding: .utf8) {
                            print("JSON a enviar: \(jsonString)")
-                       }
-                       if let newUser = try await networkService.addActivitiesCompleted(newActivityCompleted: encodeNewActivityCompleted) {
-                           // Maneja newUser en caso de éxito
-                           // updateUI(with: newUser)
-                       } else {
-                           // Maneja el caso en que newUser sea nulo (error)
-                       }
-                       if let response = try await APICall().addActivityCompleted(newActivityCompleted: encodeNewActivityCompleted){
-                           
                        }else{
-                           
+                        
+                       }
+    
+                       if let response = try await APICall().addActivityCompleted(newActivityCompleted: encodeNewActivityCompleted){
                        }
                    } catch {
                        print("Error al subir archivo")
                        // Manejar el error según sea necesario
                    }
                }
-               
            }
     }
 
@@ -70,6 +64,40 @@ class ViewControllerAct1: UIViewController, UIDocumentPickerDelegate {
     }
     
     
+    @IBAction func OpenGallery(_ sender: UIButton) {
+        let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            //imageView.image = selectedImage
+            // Obtiene la URL del archivo de la imagen seleccionada
+            if let imageURL = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+                // Realiza la llamada asíncrona dentro de una tarea asíncrona
+                Task {
+                    let jsonEncoder = JSONEncoder()
+                    jsonEncoder.outputFormatting = .prettyPrinted
+                    await APICall().uploadFileToServer(fileURL: imageURL, entrepreneurId: SessionManager.shared.currentUser!.id, activityId: 2, fileType: "image")
+                    let newActivityCompleted = NewActivitiesCompleted(activity: 2, entrepreneur: SessionManager.shared.currentUser!.id)
+                    let encodeNewActivityCompleted = try jsonEncoder.encode(newActivityCompleted)
+                    if let jsonString = String(data: encodeNewActivityCompleted, encoding: .utf8) {
+                        print("JSON a enviar: \(jsonString)")
+                    }else{
+                     
+                    }
+                    if let response = try await APICall().addActivityCompleted(newActivityCompleted: encodeNewActivityCompleted){
+                        
+                    }
+                }
+            }
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+
     
     
 }
