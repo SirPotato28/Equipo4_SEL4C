@@ -849,11 +849,11 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DV3-Ti-fdN" customClass="ViewController7" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A6r-8Q-IhH">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 27" translatesAutoresizingMaskIntoConstraints="NO" id="AYl-e2-Dq0">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="5ml-8j-F0V">
                                 <rect key="frame" x="16" y="0.0" width="268" height="99"/>
@@ -874,14 +874,14 @@
                                     <imageReference key="image" image="rectangle.portrait.and.arrow.right.fill" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NkF-zi-8XC" kind="presentation" modalPresentationStyle="fullScreen" id="XRK-EL-WLC"/>
+                                    <action selector="logout:" destination="DV3-Ti-fdN" eventType="touchUpInside" id="SCD-1K-lK3"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dl2-HS-z16">
-                                <rect key="frame" x="16" y="200" width="361" height="579"/>
+                                <rect key="frame" x="16" y="200" width="361" height="569"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw1-QY-KOf">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="111.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="109.66666666666667"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="DIAGNOSTICO INICIAL">
                                             <color key="baseBackgroundColor" red="0.46967895213589717" green="0.27919941383332586" blue="0.72417622989999997" alpha="0.42627347570000002" colorSpace="custom" customColorSpace="sRGB"/>
@@ -892,10 +892,10 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nRC-Zg-UOO">
-                                        <rect key="frame" x="0.0" y="116.66666666666669" width="361" height="112"/>
+                                        <rect key="frame" x="0.0" y="114.66666666666669" width="361" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9T7-eH-4LZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="175.66666666666666" height="112"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="175.66666666666666" height="110"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="ACTIVIDAD 1">
                                                     <color key="baseBackgroundColor" red="0.4706950413813703" green="0.27943496839038789" blue="0.72417622988985986" alpha="0.43034788378241923" colorSpace="custom" customColorSpace="sRGB"/>
@@ -906,7 +906,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4V-Eb-J30">
-                                                <rect key="frame" x="185.66666666666663" y="0.0" width="175.33333333333337" height="112"/>
+                                                <rect key="frame" x="185.66666666666663" y="0.0" width="175.33333333333337" height="110"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="ACTIVIDAD 2">
                                                     <color key="baseBackgroundColor" red="0.47069504140000001" green="0.27943496839999998" blue="0.72417622989999997" alpha="0.42627347569887331" colorSpace="custom" customColorSpace="sRGB"/>
@@ -919,10 +919,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qOM-cF-F7f">
-                                        <rect key="frame" x="0.0" y="233.66666666666666" width="361" height="111.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="229.66666666666666" width="361" height="109.66666666666666"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xz3-MW-Yua">
-                                                <rect key="frame" x="0.0" y="0.0" width="175.66666666666666" height="111.66666666666667"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="175.66666666666666" height="109.66666666666667"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="ACTIVIDAD 3">
                                                     <color key="baseBackgroundColor" red="0.47069504140000001" green="0.27943496839999998" blue="0.72417622989999997" alpha="0.42529328015385842" colorSpace="custom" customColorSpace="sRGB"/>
@@ -933,7 +933,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gp-qd-t8J">
-                                                <rect key="frame" x="185.66666666666663" y="0.0" width="175.33333333333337" height="111.66666666666667"/>
+                                                <rect key="frame" x="185.66666666666663" y="0.0" width="175.33333333333337" height="109.66666666666667"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="ACTIVIDAD 4">
                                                     <color key="baseBackgroundColor" red="0.47069504140000001" green="0.27943496839999998" blue="0.72417622989999997" alpha="0.43190085482435164" colorSpace="custom" customColorSpace="sRGB"/>
@@ -946,7 +946,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fn3-TZ-MpE">
-                                        <rect key="frame" x="0.0" y="350.33333333333337" width="361" height="112"/>
+                                        <rect key="frame" x="0.0" y="344.33333333333337" width="361" height="110"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="ENTREGABLE FINAL">
                                             <color key="baseBackgroundColor" red="0.47069504140000001" green="0.27943496839999998" blue="0.72417622989999997" alpha="0.43378754700122235" colorSpace="custom" customColorSpace="sRGB"/>
@@ -957,7 +957,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4z1-aE-ULl">
-                                        <rect key="frame" x="0.0" y="467.33333333333343" width="361" height="111.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="459.33333333333343" width="361" height="109.66666666666669"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="EVALUACION DE CIERRE">
                                             <color key="baseBackgroundColor" red="0.47069504140000001" green="0.27943496839999998" blue="0.72417622989999997" alpha="0.43164757968617135" colorSpace="custom" customColorSpace="sRGB"/>
@@ -969,7 +969,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9Y-ps-l91">
-                                <rect key="frame" x="55" y="790.66666666666663" width="107" height="51.333333333333371"/>
+                                <rect key="frame" x="55" y="780.66666666666663" width="107" height="51.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="book.closed.fill" catalog="system" imagePlacement="top" imagePadding="3">
                                     <attributedString key="attributedTitle">
@@ -997,7 +997,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIo-nl-PqV">
-                                <rect key="frame" x="243" y="790.66666666666663" width="95" height="51.333333333333371"/>
+                                <rect key="frame" x="243" y="780.66666666666663" width="95" height="51.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="person" catalog="system" imagePlacement="top" imagePadding="3">
                                     <attributedString key="attributedTitle">
@@ -1296,7 +1296,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="pN2-PK-Jbq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8fR-3U-yjy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tha-7D-7KU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="aVH-6j-gup"/>
@@ -1309,6 +1308,7 @@
                         <segue destination="DV3-Ti-fdN" kind="relationship" relationship="viewControllers" id="Xbu-9C-t7g"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fR-3U-yjy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3776.3358778625952" y="-804.22535211267609"/>
         </scene>
@@ -2144,8 +2144,16 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBl-Gm-zQ2">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1400"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtY-zP-iIn">
+                                                <rect key="frame" x="8" y="0.0" width="96" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.uturn.backward" catalog="system" title="  Back"/>
+                                                <connections>
+                                                    <segue destination="DV3-Ti-fdN" kind="presentation" id="Yl4-aE-vrn"/>
+                                                </connections>
+                                            </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvY-JK-fvp">
-                                                <rect key="frame" x="32" y="29" width="339" height="1309"/>
+                                                <rect key="frame" x="35" y="18" width="339" height="1309"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Act. 1.- Identificación" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX7-Pq-RcR">
@@ -2201,60 +2209,35 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1q0-fs-bZn">
-                                                        <rect key="frame" x="14" y="1174" width="309.33333333333331" height="68.666666666666742"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZH-uf-K6O">
-                                                                <rect key="frame" x="121.66666666666666" y="0.0" width="66.333333333333343" height="34.333333333333336"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Mapa"/>
-                                                                <connections>
-                                                                    <segue destination="CQY-Lr-tVC" kind="show" id="cKs-gu-PuE"/>
-                                                                </connections>
-                                                            </button>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="UaL-SC-Xq4">
-                                                                <rect key="frame" x="0.0" y="34.333333333333329" width="309.33333333333331" height="34.333333333333329"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rre-SR-U0s">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="151.66666666666666" height="34.333333333333336"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="filled" title="Seleccionar Foto"/>
-                                                                        <connections>
-                                                                            <action selector="onGoToGallery:" destination="hpO-NJ-WGG" eventType="touchUpInside" id="fuU-1r-nlw"/>
-                                                                            <segue destination="bVB-EQ-hHV" kind="show" identifier="gallerySegue" id="Bv5-g7-PLo"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vb7-Na-Mss">
-                                                                        <rect key="frame" x="157.66666666666669" y="0.0" width="151.66666666666669" height="34.333333333333336"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="filled" title="Cargar Archivos"/>
-                                                                        <connections>
-                                                                            <action selector="subirArchivos:" destination="hpO-NJ-WGG" eventType="touchUpInside" id="RFA-kq-Z6x"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOE-Be-oQj">
-                                                        <rect key="frame" x="131" y="308" width="75" height="35"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRE-WE-RO2">
+                                                        <rect key="frame" x="194" y="1200" width="124.33333333333303" height="34.333333333333485"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Subir Imagen"/>
                                                         <connections>
-                                                            <action selector="OpenGallery:" destination="hpO-NJ-WGG" eventType="touchUpInside" id="Bpm-8f-0vR"/>
+                                                            <action selector="OpenGallery:" destination="hpO-NJ-WGG" eventType="touchUpInside" id="pKR-rl-ncf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vb7-Na-Mss">
+                                                        <rect key="frame" x="13" y="1201" width="145.66666666666697" height="34.333333333333485"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Cargar Archivos"/>
+                                                        <connections>
+                                                            <action selector="subirArchivos:" destination="hpO-NJ-WGG" eventType="touchUpInside" id="RFA-kq-Z6x"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZH-uf-K6O">
+                                                        <rect key="frame" x="144" y="1243" width="66.33333333333303" height="34.333333333333485"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Mapa"/>
+                                                        <connections>
+                                                            <segue destination="CQY-Lr-tVC" kind="show" id="cKs-gu-PuE"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtY-zP-iIn">
-                                                <rect key="frame" x="8" y="0.0" width="96" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="arrow.uturn.backward" catalog="system" title="  Back"/>
-                                                <connections>
-                                                    <segue destination="DV3-Ti-fdN" kind="presentation" id="Yl4-aE-vrn"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1400" id="8zF-fX-cCY"/>
@@ -2922,7 +2905,7 @@ Cierre
             <objects>
                 <viewController id="CQY-Lr-tVC" customClass="ViewControllerMapLoc" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UiE-QY-ytK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZWw-hh-yZV">
@@ -2971,7 +2954,7 @@ Cierre
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galería" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bx-mi-7fu">
-                                <rect key="frame" x="0.0" y="44" width="393" height="36"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="36"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3186,8 +3169,8 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lTa-no-hFh"/>
-        <segue reference="XRK-EL-WLC"/>
+        <segue reference="Yl4-aE-vrn"/>
+        <segue reference="Cfs-Qr-xHK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Component 1Bar" width="355" height="34"/>

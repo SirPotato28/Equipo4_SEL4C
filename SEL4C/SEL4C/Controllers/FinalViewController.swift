@@ -209,29 +209,42 @@ class FinalViewController: UIViewController {
                  } catch {
                      
                  }
+                let confirmationAlert = UIAlertController(title: "Respuestas enviadas", message: "Tus respuestas se han enviado correctamente.", preferredStyle: .alert)
+                    confirmationAlert.addAction(UIAlertAction(title: "OK", style: .default) { (_) in
+                        DispatchQueue.main.async {
+                            // Realiza la transición al UITabBarController
+                            if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") {
+                                UIView.transition(with: UIApplication.shared.windows.first!,
+                                                  duration: 0.5,
+                                                  options: .transitionFlipFromRight,
+                                                  animations: {
+                                                      UIApplication.shared.windows.first?.rootViewController = homeVC
+                                                  },
+                                                  completion: nil)
+                            }
+                        }
+                    })
+
+                    present(confirmationAlert, animated: true, completion: nil)
             } catch {
-                // Maneja otros errores aquí
-                print("Otro error ocurrió: \(error)")
+                let confirmationAlert = UIAlertController(title: "Error", message: "Un error ha ocurrido al enviar las respuestas", preferredStyle: .alert)
+                    confirmationAlert.addAction(UIAlertAction(title: "OK", style: .default) { (_) in
+                        DispatchQueue.main.async {
+                            // Realiza la transición al UITabBarController
+                            if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") {
+                                UIView.transition(with: UIApplication.shared.windows.first!,
+                                                  duration: 0.5,
+                                                  options: .transitionFlipFromRight,
+                                                  animations: {
+                                                      UIApplication.shared.windows.first?.rootViewController = homeVC
+                                                  },
+                                                  completion: nil)
+                            }
+                        }
+                    })
+                    present(confirmationAlert, animated: true, completion: nil)
             }
         }
-
-        let confirmationAlert = UIAlertController(title: "Respuestas enviadas", message: "Tus respuestas se han enviado correctamente.", preferredStyle: .alert)
-            confirmationAlert.addAction(UIAlertAction(title: "OK", style: .default) { (_) in
-                DispatchQueue.main.async {
-                    // Realiza la transición al UITabBarController
-                    if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") {
-                        UIView.transition(with: UIApplication.shared.windows.first!,
-                                          duration: 0.5,
-                                          options: .transitionFlipFromRight,
-                                          animations: {
-                                              UIApplication.shared.windows.first?.rootViewController = homeVC
-                                          },
-                                          completion: nil)
-                    }
-                }
-            })
-
-            present(confirmationAlert, animated: true, completion: nil)
     }
 
     func updateUI(with questions: Questions) {

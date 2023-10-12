@@ -155,6 +155,27 @@ class ViewController7: UIViewController {
             }
         }
     
+    @IBAction func logout(_ sender: UIButton) {
+        SessionManager.shared.setCurrentUser(nil)
+        let confirmationAlert = UIAlertController(title: "Success", message: "Sesión Cerrada correctamente", preferredStyle: .alert)
+            confirmationAlert.addAction(UIAlertAction(title: "OK", style: .default) { (_) in
+                DispatchQueue.main.async {
+                    // Realiza la transición al UITabBarController
+                    if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "Login") {
+                        UIView.transition(with: UIApplication.shared.windows.first!,
+                                          duration: 0.5,
+                                          options: .transitionFlipFromRight,
+                                          animations: {
+                                              UIApplication.shared.windows.first?.rootViewController = homeVC
+                                          },
+                                          completion: nil)
+                    }
+                }
+            })
+
+            present(confirmationAlert, animated: true, completion: nil)
+    }
+    
     
 }
 

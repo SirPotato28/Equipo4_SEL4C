@@ -54,9 +54,7 @@ class ViewControllerGaleria: UIViewController, UIImagePickerControllerDelegate, 
                     }else{
                      
                     }
-                    if let response = try await APICall().addActivityCompleted(newActivityCompleted: encodeNewActivityCompleted){
-                        
-                    }
+                   
                 }
             }
         }

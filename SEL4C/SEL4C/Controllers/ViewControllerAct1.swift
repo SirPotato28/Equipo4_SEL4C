@@ -78,19 +78,40 @@ class ViewControllerAct1: UIViewController, UIDocumentPickerDelegate, UIImagePic
             if let imageURL = info[UIImagePickerController.InfoKey.imageURL] as? URL {
                 // Realiza la llamada asíncrona dentro de una tarea asíncrona
                 Task {
-                    let jsonEncoder = JSONEncoder()
-                    jsonEncoder.outputFormatting = .prettyPrinted
-                    await APICall().uploadFileToServer(fileURL: imageURL, entrepreneurId: SessionManager.shared.currentUser!.id, activityId: 2, fileType: "image")
-                    let newActivityCompleted = NewActivitiesCompleted(activity: 2, entrepreneur: SessionManager.shared.currentUser!.id)
-                    let encodeNewActivityCompleted = try jsonEncoder.encode(newActivityCompleted)
-                    if let jsonString = String(data: encodeNewActivityCompleted, encoding: .utf8) {
-                        print("JSON a enviar: \(jsonString)")
-                    }else{
-                     
-                    }
-                    if let response = try await APICall().addActivityCompleted(newActivityCompleted: encodeNewActivityCompleted){
+                    do{
+                        let jsonEncoder = JSONEncoder()
+                        jsonEncoder.outputFormatting = .prettyPrinted
+                        do {
+                            try await APICall().uploadFileToServer(fileURL: imageURL, entrepreneurId: SessionManager.shared.currentUser!.id, activityId: 2, fileType: "image")
+                            let alertController = UIAlertController(title: "Succes", message: "Imagen enviada al servidor correctamente", preferredStyle: .alert)
+                            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            alertController.addAction(okAction)
+                            self.present(alertController, animated: true, completion: nil)
+                        } catch {
+                            let alertController = UIAlertController(title: "Error", message: "No se pudo enviar la imagen al servidor", preferredStyle: .alert)
+                            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            alertController.addAction(okAction)
+                            self.present(alertController, animated: true, completion: nil)
+                        }
+                        let newActivityCompleted = NewActivitiesCompleted(activity: 2, entrepreneur: SessionManager.shared.currentUser!.id)
+                        let encodeNewActivityCompleted = try jsonEncoder.encode(newActivityCompleted)
+                        if let jsonString = String(data: encodeNewActivityCompleted, encoding: .utf8) {
+                            print("JSON a enviar: \(jsonString)")
+                        }else{
+                         
+                        }
                         
+                        if let response = try await APICall().addActivityCompleted(newActivityCompleted: encodeNewActivityCompleted){
+                            
+                        }else{
+                           
+                        }
+                        
+                    }catch{
+                       
                     }
+                    
+                    
                 }
             }
         }
