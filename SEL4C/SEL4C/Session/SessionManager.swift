@@ -18,3 +18,19 @@ class SessionManager {
         currentUser = entrepreneur
     }
 }
+
+class UserActivityManager {
+    static let shared = UserActivityManager()
+
+    private var activitiesCompleted: [ActivitiesCompleted]?
+
+    private init() {}
+
+    func setActivitiesCompleted(_ activities: [ActivitiesCompleted]?) {
+        activitiesCompleted = activities
+    }
+
+    func getActivitiesCompleted() -> [ActivitiesCompleted]? {
+        return activitiesCompleted
+    }
+}

@@ -83,7 +83,7 @@ class ViewControllerAct1: UIViewController, UIDocumentPickerDelegate, UIImagePic
                         jsonEncoder.outputFormatting = .prettyPrinted
                         do {
                             try await APICall().uploadFileToServer(fileURL: imageURL, entrepreneurId: SessionManager.shared.currentUser!.id, activityId: 2, fileType: "image")
-                            let alertController = UIAlertController(title: "Succes", message: "Imagen enviada al servidor correctamente", preferredStyle: .alert)
+                            let alertController = UIAlertController(title: "Success", message: "Imagen enviada al servidor correctamente", preferredStyle: .alert)
                             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                             alertController.addAction(okAction)
                             self.present(alertController, animated: true, completion: nil)

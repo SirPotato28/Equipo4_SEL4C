@@ -10,6 +10,7 @@ import Foundation
 
 struct ActivitiesCompleted:Codable{
     var activity:Int
+    var attempts:Int
 }
 typealias ActivitiesCompletedArray = [ActivitiesCompleted]
 

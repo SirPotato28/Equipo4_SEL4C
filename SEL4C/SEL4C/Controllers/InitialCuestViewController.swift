@@ -40,7 +40,11 @@ class InitialCuestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let activities = UserActivityManager.shared.getActivitiesCompleted() {
+           print(activities)
+        } else {
+            print("no hay nada")
+        }
         Task {
             do {
                 let apiCall = APICall()
@@ -167,7 +171,7 @@ class InitialCuestViewController: UIViewController {
         let jsonEncoder = JSONEncoder()
         jsonEncoder.outputFormatting = .prettyPrinted
         let networkService = APICall()
-
+       
         Task {
             do {
                 var answersArray = [NewAnswer]()

@@ -2905,7 +2905,7 @@ Cierre
             <objects>
                 <viewController id="CQY-Lr-tVC" customClass="ViewControllerMapLoc" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UiE-QY-ytK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZWw-hh-yZV">
@@ -3169,6 +3169,7 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="oby-hI-Mk1"/>
         <segue reference="Yl4-aE-vrn"/>
         <segue reference="Cfs-Qr-xHK"/>
     </inferredMetricsTieBreakers>

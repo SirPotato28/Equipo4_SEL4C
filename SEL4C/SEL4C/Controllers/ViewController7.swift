@@ -37,6 +37,7 @@ class ViewController7: UIViewController {
                     let apiCall = APICall()
                     let response = try await apiCall.getActivitiesCompleted(entrepreneur_id: SessionManager.shared.currentUser!.id) //act hardcodeada
                     activities_completed = response
+                    UserActivityManager.shared.setActivitiesCompleted(response)
                     print(activities_completed)
                     let arraBtn = [act1, act2, act3, act4, act5, cierre]
                     let arraActC = activities_completed.count
