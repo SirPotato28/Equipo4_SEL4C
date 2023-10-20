@@ -12,6 +12,9 @@
 		842845A92AD46E6700F527BC /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842845A82AD46E6700F527BC /* FinalViewController.swift */; };
 		842845AE2AD483D900F527BC /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842845AD2AD483D900F527BC /* Activity.swift */; };
 		842845B12AD4948500F527BC /* UploadFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842845B02AD4948500F527BC /* UploadFiles.swift */; };
+		8429D1A92AE3255C00757D68 /* EntrepreneurProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429D1A82AE3255C00757D68 /* EntrepreneurProfile.swift */; };
+		8429D1AB2AE325FF00757D68 /* EntrepreneurEcomplexity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429D1AA2AE325FF00757D68 /* EntrepreneurEcomplexity.swift */; };
+		8429D1AD2AE32BB500757D68 /* ViewControllerResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429D1AC2AE32BB500757D68 /* ViewControllerResults.swift */; };
 		8433DBBF2AA17FB6006B6FE8 /* ViewControllerA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433DBBE2AA17FB6006B6FE8 /* ViewControllerA.swift */; };
 		844754D22AA79D1700EAB2B6 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844754D12AA79D1700EAB2B6 /* SideMenu.swift */; };
 		846238E22AD1BE2B00225DC6 /* ViewControllerMapLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846238E12AD1BE2B00225DC6 /* ViewControllerMapLoc.swift */; };
@@ -84,6 +87,9 @@
 		842845A82AD46E6700F527BC /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		842845AD2AD483D900F527BC /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		842845B02AD4948500F527BC /* UploadFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFiles.swift; sourceTree = "<group>"; };
+		8429D1A82AE3255C00757D68 /* EntrepreneurProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrepreneurProfile.swift; sourceTree = "<group>"; };
+		8429D1AA2AE325FF00757D68 /* EntrepreneurEcomplexity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrepreneurEcomplexity.swift; sourceTree = "<group>"; };
+		8429D1AC2AE32BB500757D68 /* ViewControllerResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResults.swift; sourceTree = "<group>"; };
 		8433DBBE2AA17FB6006B6FE8 /* ViewControllerA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerA.swift; sourceTree = "<group>"; };
 		844754D12AA79D1700EAB2B6 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		846238E12AD1BE2B00225DC6 /* ViewControllerMapLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMapLoc.swift; sourceTree = "<group>"; };
@@ -188,6 +194,8 @@
 				842845AD2AD483D900F527BC /* Activity.swift */,
 				84F4609D2AD625A9002F87D4 /* NewActivitiesCompleted.swift */,
 				848A50E62AE1F6FE009AD3C7 /* UpdateEntrepreneur.swift */,
+				8429D1A82AE3255C00757D68 /* EntrepreneurProfile.swift */,
+				8429D1AA2AE325FF00757D68 /* EntrepreneurEcomplexity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 				846238E72AD1CA8D00225DC6 /* ViewControllerFinal.swift */,
 				846238E92AD1CCF300225DC6 /* ViewControllerNada.swift */,
 				842845A82AD46E6700F527BC /* FinalViewController.swift */,
+				8429D1AC2AE32BB500757D68 /* ViewControllerResults.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -441,6 +450,7 @@
 				BEC01FEA2A99C4860096DC77 /* ViewController3.swift in Sources */,
 				842845A92AD46E6700F527BC /* FinalViewController.swift in Sources */,
 				849EB2272AD0A53000B8EA66 /* ViewControllerVideo.swift in Sources */,
+				8429D1AD2AE32BB500757D68 /* ViewControllerResults.swift in Sources */,
 				84F9E41E2AA25E1F00C7A947 /* ActViewController.swift in Sources */,
 				BEC01FEC2A99C7400096DC77 /* ViewController4.swift in Sources */,
 				849EB2292AD0B67800B8EA66 /* newAnswer.swift in Sources */,
@@ -454,6 +464,7 @@
 				84F9E4202AA2614400C7A947 /* ViewControllerHamburger.swift in Sources */,
 				84A35DC92ACB6EBF00F126D9 /* UserResponsesController.swift in Sources */,
 				842845A02ACF6A8E00F527BC /* newEntrepreneur.swift in Sources */,
+				8429D1A92AE3255C00757D68 /* EntrepreneurProfile.swift in Sources */,
 				84A35DC72ACB6EA400F126D9 /* UserResponses.swift in Sources */,
 				84A35DC52ACB6E8B00F126D9 /* Answer.swift in Sources */,
 				846C84D22AC35746002C07C0 /* ViewControllerActividadInicial.swift in Sources */,
@@ -463,6 +474,7 @@
 				84D100BE2AA7EDD700704C17 /* ViewController9.swift in Sources */,
 				BEC01FE82A99C0740096DC77 /* ViewController2.swift in Sources */,
 				849EB2322AD0E57400B8EA66 /* ViewControllerAct3.swift in Sources */,
+				8429D1AB2AE325FF00757D68 /* EntrepreneurEcomplexity.swift in Sources */,
 				BEC01FF22A99D1840096DC77 /* ViewController6.swift in Sources */,
 				84787D6D2AC7777F0014C7AB /* Question.swift in Sources */,
 				BEC01FB82A99BB590096DC77 /* AppDelegate.swift in Sources */,

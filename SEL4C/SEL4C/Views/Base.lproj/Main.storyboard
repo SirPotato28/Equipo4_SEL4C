@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NkF-zi-8XC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NkF-zi-8XC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -2079,10 +2079,10 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
             </objects>
             <point key="canvasLocation" x="2211" y="-2326"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Results-->
         <scene sceneID="7VJ-Ts-TML">
             <objects>
-                <viewController id="Eu4-2O-URD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Results" id="Eu4-2O-URD" customClass="ViewControllerResults" customModule="SEL4C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wHq-xL-dr3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2091,71 +2091,70 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxe-Do-ZWE">
+                                <rect key="frame" x="10" y="10" width="96" height="34.333333333333336"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.uturn.backward" catalog="system" title="  Back"/>
+                                <connections>
+                                    <segue destination="DV3-Ti-fdN" kind="presentation" modalPresentationStyle="fullScreen" id="4Jb-MT-8jp"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="poW-4C-tRq">
                                 <rect key="frame" x="16" y="59" width="268" height="99"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 19rect2" translatesAutoresizingMaskIntoConstraints="NO" id="KZO-UE-6vL">
                                 <rect key="frame" x="59" y="166" width="274" height="59"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="🦆 icon _chevron left_" translatesAutoresizingMaskIntoConstraints="NO" id="2y7-9C-xHL">
-                                <rect key="frame" x="71" y="181" width="20" height="29"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynx-U2-9UA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resultados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynx-U2-9UA">
                                 <rect key="frame" x="154" y="187" width="85" height="20.333333333333343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 15imagw graph" translatesAutoresizingMaskIntoConstraints="NO" id="53O-qC-IA0">
-                                <rect key="frame" x="32" y="278" width="329" height="479"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grafica-1-ranking-cultu 1imagw graph" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-mb-5Fx">
-                                <rect key="frame" x="47" y="325" width="290" height="273"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-2C-Aij">
-                                <rect key="frame" x="47" y="606" width="298" height="81.333333333333371"/>
-                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet neque tincidunt, lobortis dui pellentesque, dignissim magna.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="🦆 icon _file_" translatesAutoresizingMaskIntoConstraints="NO" id="82l-52-Zyp">
-                                <rect key="frame" x="71" y="765" width="55" height="53"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hn0-HN-sfw">
+                                <rect key="frame" x="16" y="252" width="361" height="509"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="🦆 icon _person_" translatesAutoresizingMaskIntoConstraints="NO" id="kLp-wW-w6n">
-                                <rect key="frame" x="273" y="765" width="60" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="90" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxo-dc-CZi">
+                                        <rect key="frame" x="8" y="0.0" width="353" height="362"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <mutableString key="text">"Motivación" = 2.00, "Perseverancia y resilencia" = 2.0,"Tolerancia a la incertidumbre, ambigüedad y dominio del estrés"=1.00, "Planeación estrategica", 
+      "Comunicación y persuación", "Movilizar personas","Trabajo colaborativo","Implicación social", 
+      "Empatía", "Identificación de problematicas sociales/ambientales", "Orientación a la sostenibilidad",
+    "Sentido Ético", "Creatividad", "Alfabetización economica y financiera", "Valoración de ideas, resultados e impactos en el ambiente y las personas",
+  "Aprendizaje y adaptibilidad","Gestión de recursos limitados para proyectos sociales"</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Pensamiento sistématico&quot;, &quot;Pensamiento científico&quot;, &quot;Pensamiento crítico&quot;, &quot;Pensamiento innovador&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asB-eF-z06">
+                                        <rect key="frame" x="0.0" y="341" width="353" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1co-cm-y4N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1co-cm-y4N" firstAttribute="trailing" secondItem="Ynx-U2-9UA" secondAttribute="trailing" constant="154" id="4M0-fx-q5h"/>
-                            <constraint firstItem="2y7-9C-xHL" firstAttribute="top" secondItem="poW-4C-tRq" secondAttribute="bottom" constant="23" id="4Un-Is-e7w"/>
-                            <constraint firstItem="UJX-2C-Aij" firstAttribute="top" secondItem="cR7-mb-5Fx" secondAttribute="bottom" constant="8" symbolic="YES" id="Aii-kd-Kzk"/>
-                            <constraint firstItem="Ynx-U2-9UA" firstAttribute="leading" secondItem="2y7-9C-xHL" secondAttribute="trailing" constant="63" id="CWT-SW-dk0"/>
-                            <constraint firstItem="cR7-mb-5Fx" firstAttribute="top" secondItem="KZO-UE-6vL" secondAttribute="bottom" constant="100" id="CsB-Ws-CyL"/>
-                            <constraint firstItem="1co-cm-y4N" firstAttribute="trailing" secondItem="poW-4C-tRq" secondAttribute="trailing" constant="109" id="IA9-ns-Xdi"/>
-                            <constraint firstItem="1co-cm-y4N" firstAttribute="trailing" secondItem="UJX-2C-Aij" secondAttribute="trailing" constant="48" id="QG4-9q-2oT"/>
-                            <constraint firstItem="1co-cm-y4N" firstAttribute="trailing" secondItem="cR7-mb-5Fx" secondAttribute="trailing" constant="56" id="YEh-RR-Q0Y"/>
-                            <constraint firstItem="poW-4C-tRq" firstAttribute="leading" secondItem="1co-cm-y4N" secondAttribute="leading" constant="16" id="fNC-c3-Dga"/>
-                            <constraint firstItem="Ynx-U2-9UA" firstAttribute="top" secondItem="poW-4C-tRq" secondAttribute="bottom" constant="29" id="fQT-Bu-RSe"/>
-                            <constraint firstItem="KZO-UE-6vL" firstAttribute="leading" secondItem="1co-cm-y4N" secondAttribute="leading" constant="59" id="ffq-bD-Szg"/>
-                            <constraint firstItem="UJX-2C-Aij" firstAttribute="leading" secondItem="1co-cm-y4N" secondAttribute="leading" constant="47" id="iHe-fe-Htn"/>
-                            <constraint firstItem="KZO-UE-6vL" firstAttribute="top" secondItem="poW-4C-tRq" secondAttribute="bottom" constant="8" symbolic="YES" id="j7b-Dw-EbV"/>
-                            <constraint firstItem="1co-cm-y4N" firstAttribute="trailing" secondItem="53O-qC-IA0" secondAttribute="trailing" constant="32" id="jYP-b9-6oC"/>
-                            <constraint firstItem="poW-4C-tRq" firstAttribute="top" secondItem="1co-cm-y4N" secondAttribute="top" id="pwn-7q-XWd"/>
-                            <constraint firstItem="cR7-mb-5Fx" firstAttribute="leading" secondItem="1co-cm-y4N" secondAttribute="leading" constant="47" id="q1f-LB-Zls"/>
-                            <constraint firstItem="53O-qC-IA0" firstAttribute="leading" secondItem="1co-cm-y4N" secondAttribute="leading" constant="32" id="tuv-Q1-U6k"/>
-                            <constraint firstItem="53O-qC-IA0" firstAttribute="top" secondItem="2y7-9C-xHL" secondAttribute="bottom" constant="68" id="v8B-i8-Zsx"/>
-                            <constraint firstItem="1co-cm-y4N" firstAttribute="trailing" secondItem="KZO-UE-6vL" secondAttribute="trailing" constant="60" id="xU2-kD-IGv"/>
+                            <constraint firstItem="poW-4C-tRq" firstAttribute="top" secondItem="1co-cm-y4N" secondAttribute="top" id="6vs-RX-KeW"/>
+                            <constraint firstItem="KZO-UE-6vL" firstAttribute="top" secondItem="poW-4C-tRq" secondAttribute="bottom" constant="8" symbolic="YES" id="X5Y-9y-h8Y"/>
+                            <constraint firstItem="KZO-UE-6vL" firstAttribute="leading" secondItem="1co-cm-y4N" secondAttribute="leading" constant="59" id="b7x-nl-yqR"/>
+                            <constraint firstItem="1co-cm-y4N" firstAttribute="trailing" secondItem="KZO-UE-6vL" secondAttribute="trailing" constant="60" id="gNn-7U-Edm"/>
+                            <constraint firstItem="poW-4C-tRq" firstAttribute="leading" secondItem="1co-cm-y4N" secondAttribute="leading" constant="16" id="v2O-AX-6pb"/>
+                            <constraint firstItem="Nxe-Do-ZWE" firstAttribute="top" secondItem="wHq-xL-dr3" secondAttribute="top" constant="10" id="xYh-jt-Ric"/>
+                            <constraint firstItem="Nxe-Do-ZWE" firstAttribute="leading" secondItem="wHq-xL-dr3" secondAttribute="leading" constant="10" id="zzc-Nh-BjK"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfZ-rN-Sti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3244" y="-1599"/>
+            <point key="canvasLocation" x="3243.5114503816794" y="-1599.2957746478874"/>
         </scene>
         <!--View Controller Act1-->
         <scene sceneID="aVc-bt-wux">
@@ -2188,7 +2187,7 @@ Lee detenidamente cada uno de los reactivos que se presentan y responde marcando
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="arrow.uturn.backward" catalog="system" title="  Back"/>
                                                 <connections>
-                                                    <segue destination="DV3-Ti-fdN" kind="presentation" id="Yl4-aE-vrn"/>
+                                                    <segue destination="DV3-Ti-fdN" kind="presentation" modalPresentationStyle="fullScreen" id="Yl4-aE-vrn"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvY-JK-fvp">
@@ -3208,16 +3207,14 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k1h-Fr-Hc2"/>
+        <segue reference="4Jb-MT-8jp"/>
         <segue reference="Cfs-Qr-xHK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Component 1Bar" width="355" height="34"/>
         <image name="Github-Octicons-Checkbox-16.48" width="48" height="48"/>
         <image name="Github-Octicons-Checkbox-16.48 copia" width="48" height="48"/>
-        <image name="Grafica-1-ranking-cultu 1imagw graph" width="367" height="273"/>
         <image name="Image" width="32" height="32"/>
-        <image name="Rectangle 15imagw graph" width="384" height="479"/>
         <image name="Rectangle 19rect2" width="380" height="59"/>
         <image name="Rectangle 27" width="430" height="932"/>
         <image name="Rectangle 28Rectangle" width="384" height="133"/>
@@ -3231,7 +3228,6 @@ En la parte inferior del árbol se sugiere respondas lo siguiente:
         <image name="🦆 icon _chevron left_" width="20" height="29"/>
         <image name="🦆 icon _circle check_" width="70" height="70"/>
         <image name="🦆 icon _envelope closed_" width="24" height="18"/>
-        <image name="🦆 icon _file_" width="34" height="39"/>
         <image name="🦆 icon _person_" width="91" height="91"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

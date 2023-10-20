@@ -48,7 +48,10 @@ class ViewController7: UIViewController {
                             let buttoncompleted = arraBtn[i-1]
                             buttoncompleted?.backgroundColor = UIColor(red: 0.2, green: 1, blue: 0.1, alpha: 0.8)
                             button?.isEnabled = true
+                        }else{
+                            inicial.backgroundColor = UIColor(red: 0.2, green: 1, blue: 0.1, alpha: 0.8)
                         }
+                        
                         button?.isEnabled = true
                     }
                 } catch {

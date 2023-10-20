@@ -108,9 +108,9 @@ class InitialCuestViewController: UIViewController {
                     label.minimumScaleFactor = 0.5
 
                     let slider = UISlider()
-                    slider.minimumValue = 0.0
-                    slider.maximumValue = 4.0
-                    slider.value = 0.0
+                    slider.minimumValue = 1.0
+                    slider.maximumValue = 5.0
+                    slider.value = 1.0
                     slider.isContinuous = true
                     slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
 
@@ -120,7 +120,7 @@ class InitialCuestViewController: UIViewController {
                     slider.minimumTrackTintColor = UIColor.blue
                     slider.maximumTrackTintColor = UIColor.lightGray
                     slider.thumbTintColor = UIColor.blue
-                    sliderValues.append(0)
+                    sliderValues.append(1)
 
                     let valueLabel = UILabel()
                     valueLabel.text = "\(Int(slider.value))"
@@ -131,6 +131,7 @@ class InitialCuestViewController: UIViewController {
                     CuadroPregunta.addArrangedSubview(likertImageView)
                     CuadroPregunta.addArrangedSubview(slider)
                     CuadroPregunta.addArrangedSubview(valueLabel)
+                
                 }
 
                 // Agregar el botón de "Enviar" al final de las preguntas
@@ -219,12 +220,12 @@ class InitialCuestViewController: UIViewController {
                     confirmationAlert.addAction(UIAlertAction(title: "OK", style: .default) { (_) in
                         DispatchQueue.main.async {
                             // Realiza la transición al UITabBarController
-                            if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") {
+                            if let resultadosView = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") {
                                 UIView.transition(with: UIApplication.shared.windows.first!,
                                                   duration: 0.5,
                                                   options: .transitionFlipFromRight,
                                                   animations: {
-                                                      UIApplication.shared.windows.first?.rootViewController = homeVC
+                                                      UIApplication.shared.windows.first?.rootViewController = resultadosView
                                                   },
                                                   completion: nil)
                             }

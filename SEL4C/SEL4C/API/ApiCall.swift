@@ -27,7 +27,7 @@ class APICall {
         let formDataEncoded = formData.data(using: .utf8)
         
         // Make a request to the Django API to obtain a token: 20.106.194.201
-        let tokenURL = URL(string: "http://127.0.0.1:8000/api/token/")!
+        let tokenURL = URL(string: "http://20.106.194.201/api/token/")!
         var tokenRequest = URLRequest(url: tokenURL)
         tokenRequest.httpMethod = "POST"
         tokenRequest.httpBody = formDataEncoded
@@ -74,7 +74,7 @@ class APICall {
     
     func getEntrepreneur(email: String) async -> Entrepreneur? {
         let accessToken = await getToken()
-        let getUserURL = URL(string: "http://127.0.0.1:8000/api-root/entrepreneurs/?email=\(email)&format=json")
+        let getUserURL = URL(string: "http://20.106.194.201/api-root/entrepreneurs/?email=\(email)&format=json")
         
         do {
             let (data, response) = try await URLSession.shared.data(from: getUserURL!)
@@ -110,7 +110,7 @@ class APICall {
         let accessToken = await getToken()
         
             
-        let baseString = "http://127.0.0.1:8000/api-root/completed-acts/?entrepreneur=\(entrepreneur_id)&format=json"
+        let baseString = "http://20.106.194.201/api-root/completed-acts/?entrepreneur=\(entrepreneur_id)&format=json"
         let questionsURL = URL(string: baseString)!
         
         var request = URLRequest(url: questionsURL)
@@ -140,7 +140,7 @@ class APICall {
     
     func addEntrepreneur(newEntrepreneur: Data) async throws -> NewEntrepreneur? {
         let accessToken =  await getToken()
-        let addUserURL = URL(string: "http://127.0.0.1:8000/api-root/entrepreneurs/")
+        let addUserURL = URL(string: "http://20.106.194.201/api-root/entrepreneurs/")
         
         var request = URLRequest(url: addUserURL!)
         request.httpMethod = "POST"
@@ -167,7 +167,7 @@ class APICall {
     
     func addActivitiesCompleted(newActivityCompleted: Data) async throws -> ActivitiesCompleted? {
         let accessToken =  await getToken()
-        let addUserURL = URL(string: "http://127.0.0.1:8000/api-root/entrepreneurs/")
+        let addUserURL = URL(string: "http://20.106.194.201/api-root/entrepreneurs/")
         
         var request = URLRequest(url: addUserURL!)
         request.httpMethod = "POST"
@@ -195,7 +195,7 @@ class APICall {
     
     func updateEntrepreneur(entrepreneur: Data, entrepreneur_id: Int) async throws -> Entrepreneur {
         let accessToken =  await getToken()
-        let addUserURL = URL(string: "http://127.0.0.1:8000/api-root/entrepreneurs/\(entrepreneur_id)/")
+        let addUserURL = URL(string: "http://20.106.194.201/api-root/entrepreneurs/\(entrepreneur_id)/")
         
         var request = URLRequest(url: addUserURL!)
         request.httpMethod = "PUT"
@@ -217,7 +217,7 @@ class APICall {
         
             
         // Now use the obtained token for your API request
-        let baseString = "http://127.0.0.1:8000/api-root/questions/?format=json"
+        let baseString = "http://20.106.194.201/api-root/questions/?format=json"
         let questionsURL = URL(string: baseString)!
         
         var request = URLRequest(url: questionsURL)
@@ -246,7 +246,7 @@ class APICall {
     
     func addAnswers(newAnswer: Data) async throws -> NewAnswer? {
         let accessToken =  await getToken()
-        let addAnswerURL = URL(string: "http://127.0.0.1:8000/api/answers/create-multiple/")
+        let addAnswerURL = URL(string: "http://20.106.194.201/api/answers/create-multiple/")
         
         var request = URLRequest(url: addAnswerURL!)
         request.httpMethod = "POST"
@@ -276,7 +276,7 @@ class APICall {
         let accessToken = await getToken()
         
         // Crear la URL del endpoint de la API
-        let uploadURL = URL(string: "http://127.0.0.1:8000/api-root/files/")! // Cambia la URL según tu configuración
+        let uploadURL = URL(string: "http://20.106.194.201/api-root/files/")! // Cambia la URL según tu configuración
         
         // Crear una solicitud POST
         var request = URLRequest(url: uploadURL)
@@ -336,7 +336,7 @@ class APICall {
     
     func addActivityCompleted(newActivityCompleted: Data) async throws -> NewActivitiesCompleted? {
             let accessToken =  await getToken()
-            let addUserURL = URL(string: "http://127.0.0.1:8000/api-root/completed-acts/")
+            let addUserURL = URL(string: "http://20.106.194.201/api-root/completed-acts/")
             
             var request = URLRequest(url: addUserURL!)
             request.httpMethod = "POST"
@@ -360,6 +360,70 @@ class APICall {
                 return nil // Maneja el error y devuelve un valor nulo en caso de error
             }
         }
+    
+    func getEntrepreneurProfile(entrepreneur_id: Int) async throws -> EntrepreneurProfileArray {
+
+        let accessToken = await getToken()
+        
+            
+        let baseString = "http://20.106.194.201/api-root/entrepreneur_profiles/?entrepreneur=\(entrepreneur_id)&format=json"
+        let questionsURL = URL(string: baseString)!
+        
+        var request = URLRequest(url: questionsURL)
+        request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        if let httpResponse = response as? HTTPURLResponse {
+            print("Status Code: \(httpResponse.statusCode)")
+        }
+        
+        if let data = String(data: data, encoding: .utf8) {
+            print("Response Data: \(data)")
+        }
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw QuestionError.itemNotFound
+        }
+        
+        
+        
+        let jsonDecoder = JSONDecoder()
+        let entrepreneurProfiles = try jsonDecoder.decode(EntrepreneurProfileArray.self, from: data)
+        return entrepreneurProfiles
+    }
+    
+    func getEntrepreneurEcomplexity(entrepreneur_id: Int) async throws -> EntrepreneurEcomplexityArray {
+
+        let accessToken = await getToken()
+        
+            
+        let baseString = "http://20.106.194.201/api-root/entrepreneur_ecomplexity/?entrepreneur=\(entrepreneur_id)&format=json"
+        let questionsURL = URL(string: baseString)!
+        
+        var request = URLRequest(url: questionsURL)
+        request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        if let httpResponse = response as? HTTPURLResponse {
+            print("Status Code: \(httpResponse.statusCode)")
+        }
+        
+        if let data = String(data: data, encoding: .utf8) {
+            print("Response Data: \(data)")
+        }
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw QuestionError.itemNotFound
+        }
+        
+        
+        
+        let jsonDecoder = JSONDecoder()
+        let entrepreneurEcomplexitites = try jsonDecoder.decode(EntrepreneurEcomplexityArray.self, from: data)
+        return entrepreneurEcomplexitites
+    }
 
     
 }
