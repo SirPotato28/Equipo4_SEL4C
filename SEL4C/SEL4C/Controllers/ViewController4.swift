@@ -116,31 +116,31 @@ class ViewController4: UIViewController, UITextFieldDelegate {
                 configureButton(button: paisButton, options: countryNames)
             }
         
-        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-                // Verifica si el text field es el de nombre o apellido
-                if textField == nombre {
-                    // Concatena el nuevo texto con el texto actual
-                    let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
-                    print("Nombre: \(newText)")
-                } else if textField == apellido {
-                    let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
-                    print("Apellido: \(newText)")
-                } else if textField == edad {
-                    if let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string),
-                                   let edadInt = Int(newText),
-                                   (0...80).contains(edadInt) {
-                                    print("Edad: \(edadInt)")
-                                    return true
-                                } else {
-                                    print("Edad inválida")
-                                    return false
-                                }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            if textField == nombre || textField == apellido {
+                // Define un conjunto de caracteres válidos (solo letras y espacios)
+                let validCharacterSet = CharacterSet.letters.union(CharacterSet.whitespaces)
+                // Verifica si cada carácter en la cadena de reemplazo es válido
+                for character in string {
+                    if !validCharacterSet.contains(character.unicodeScalars.first!) {
+                        return false // Carácter no válido, no permitir el cambio
+                    }
                 }
-                
-                // Permite el cambio en el text field
-                return true
-            
+            } else if textField == edad {
+                if let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string),
+                   let edadInt = Int(newText),
+                   (0...80).contains(edadInt) {
+                    print("Edad: \(edadInt)")
+                    return true
+                } else {
+                    print("Edad inválida")
+                    return false
+                }
             }
+            return true
+        }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RegisterView" {
             if let nextViewController = segue.destination as? ViewController5 {

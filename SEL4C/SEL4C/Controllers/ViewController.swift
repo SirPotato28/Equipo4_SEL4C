@@ -41,14 +41,18 @@ class ViewController: UIViewController {
     }
 
     @objc func textFieldDidChange(_ textField: UITextField) {
-            if let email = emailTextField.text {
-                if email.contains("@") {
-                    Siguieteview.isEnabled = true // Habilita el botón si el "@" está presente
-                } else {
-                    Siguieteview.isEnabled = false // Deshabilita el botón si el "@" no está presente
+                if let email = emailTextField.text {
+                    // Validar el formato del correo electrónico usando una expresión regular
+                    let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+                    let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+                    
+                    if emailPredicate.evaluate(with: email) {
+                        Siguieteview.isEnabled = true // Habilita el botón si el formato es válido
+                    } else {
+                        Siguieteview.isEnabled = false // Deshabilita el botón si el formato no es válido
+                    }
                 }
             }
-        }
     
     @IBAction func AddEmail(_ sender: Any) {
         if let email = emailTextField.text {

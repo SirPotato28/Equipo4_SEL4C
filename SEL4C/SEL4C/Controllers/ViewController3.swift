@@ -62,13 +62,13 @@ class ViewController3: UIViewController {
         }
 
         // Función para verificar si las contraseñas son iguales
-        func checkPasswordsMatch() {
-            if password2.text == password1.text {
-                Siguieteview.isEnabled = true // Habilitar el botón si las contraseñas coinciden
-            } else {
-                Siguieteview.isEnabled = false // Deshabilitar el botón si las contraseñas no coinciden
+    func checkPasswordsMatch() {
+                if let password1Text = password1.text, let password2Text = password2.text, password1Text.count >= 8, password2Text.count >= 8, password1Text == password2Text {
+                    Siguieteview.isEnabled = true // Habilitar el botón si las contraseñas coinciden y tienen al menos 8 caracteres
+                } else {
+                    Siguieteview.isEnabled = false // Deshabilitar el botón si las contraseñas no coinciden o no cumplen con el requisito mínimo de 8 caracteres
+                }
             }
-        }
     
     
     

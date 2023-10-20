@@ -39,11 +39,16 @@ class ViewController7: UIViewController {
                     activities_completed = response
                     UserActivityManager.shared.setActivitiesCompleted(response)
                     print(activities_completed)
-                    let arraBtn = [act1, act2, act3, act4, act5, cierre]
+                    let arraBtn = [act1, act2, act3, act4, act5, cierre,inicial]
                     let arraActC = activities_completed.count
 
                     for i in 0..<arraActC {
                         let button = arraBtn[i]
+                        if i != 0 {
+                            let buttoncompleted = arraBtn[i-1]
+                            buttoncompleted?.backgroundColor = UIColor(red: 0.2, green: 1, blue: 0.1, alpha: 0.8)
+                            button?.isEnabled = true
+                        }
                         button?.isEnabled = true
                     }
                 } catch {

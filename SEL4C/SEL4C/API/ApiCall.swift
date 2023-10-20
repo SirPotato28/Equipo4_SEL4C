@@ -193,9 +193,9 @@ class APICall {
     }
 
     
-    func updateEntrepreneur(entrepreneur: Data) async throws -> Entrepreneur {
+    func updateEntrepreneur(entrepreneur: Data, entrepreneur_id: Int) async throws -> Entrepreneur {
         let accessToken =  await getToken()
-        let addUserURL = URL(string: "https://gorest.co.in/public/v2/users/5223920")
+        let addUserURL = URL(string: "http://20.106.194.201/api-root/entrepreneurs/\(entrepreneur_id)/")
         
         var request = URLRequest(url: addUserURL!)
         request.httpMethod = "PUT"

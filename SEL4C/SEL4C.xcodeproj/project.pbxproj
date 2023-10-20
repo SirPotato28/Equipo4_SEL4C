@@ -23,6 +23,7 @@
 		84787D6B2AC7776A0014C7AB /* EcomplexityEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84787D6A2AC7776A0014C7AB /* EcomplexityEngine.swift */; };
 		84787D6D2AC7777F0014C7AB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84787D6C2AC7777F0014C7AB /* Question.swift */; };
 		84787D6F2AC784410014C7AB /* ViewControllerInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84787D6E2AC784410014C7AB /* ViewControllerInicial.swift */; };
+		848A50E72AE1F6FE009AD3C7 /* UpdateEntrepreneur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A50E62AE1F6FE009AD3C7 /* UpdateEntrepreneur.swift */; };
 		849A70112ACE1DBE00C6532A /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A70102ACE1DBE00C6532A /* AccessToken.swift */; };
 		849A70132ACE1EFC00C6532A /* Entrepreneur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A70122ACE1EFC00C6532A /* Entrepreneur.swift */; };
 		849EB2272AD0A53000B8EA66 /* ViewControllerVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EB2262AD0A53000B8EA66 /* ViewControllerVideo.swift */; };
@@ -95,6 +96,7 @@
 		84787D6A2AC7776A0014C7AB /* EcomplexityEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcomplexityEngine.swift; sourceTree = "<group>"; };
 		84787D6C2AC7777F0014C7AB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		84787D6E2AC784410014C7AB /* ViewControllerInicial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInicial.swift; sourceTree = "<group>"; };
+		848A50E62AE1F6FE009AD3C7 /* UpdateEntrepreneur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEntrepreneur.swift; sourceTree = "<group>"; };
 		849A70102ACE1DBE00C6532A /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		849A70122ACE1EFC00C6532A /* Entrepreneur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrepreneur.swift; sourceTree = "<group>"; };
 		849EB2262AD0A53000B8EA66 /* ViewControllerVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerVideo.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				842845A12AD4641000F527BC /* ActivitiesCompleted.swift */,
 				842845AD2AD483D900F527BC /* Activity.swift */,
 				84F4609D2AD625A9002F87D4 /* NewActivitiesCompleted.swift */,
+				848A50E62AE1F6FE009AD3C7 /* UpdateEntrepreneur.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				846238E22AD1BE2B00225DC6 /* ViewControllerMapLoc.swift in Sources */,
 				849EB22C2AD0BB4900B8EA66 /* SessionManager.swift in Sources */,
 				84F4609E2AD625A9002F87D4 /* NewActivitiesCompleted.swift in Sources */,
+				848A50E72AE1F6FE009AD3C7 /* UpdateEntrepreneur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
