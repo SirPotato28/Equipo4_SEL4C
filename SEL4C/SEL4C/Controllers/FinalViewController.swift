@@ -41,7 +41,7 @@ class FinalViewController: UIViewController {
         Task {
             do {
                 let apiCall = APICall()
-                let response = try await apiCall.fetchQuestions(activity_id: activity_id_num) //act hardcodeada
+                let response = try await apiCall.fetchQuestions() 
                 questions = response
                 self.questionsText = response.map { $0.description }
 

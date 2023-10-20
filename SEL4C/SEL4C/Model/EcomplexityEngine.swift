@@ -22,9 +22,6 @@ struct EcomplexityEngine{
     func getQuestionNum()->Int{
         return questions[questionIndex].question_num
     }
-    func getQuestionActivity()->Int{
-        return questions[questionIndex].activity
-    }
     func getProgress()->Float{
         let progress = Float(questionIndex+1)/Float(questions.count)
         return progress

@@ -29,7 +29,7 @@ class ViewControllerActividadInicial: UIViewController {
         Task {
                 do {
                     let apiCall = APICall()
-                    let questions = try await apiCall.fetchQuestions(activity_id: 1)
+                    let questions = try await apiCall.fetchQuestions()
                     
                     if questions.isEmpty {
                         // Mostrar un mensaje de error si no hay preguntas disponibles
@@ -64,7 +64,7 @@ class ViewControllerActividadInicial: UIViewController {
 
     @IBAction func userAnswer(_ sender: UIButton) {
         let answer = sender.titleLabel?.text
-        let question = Question(id: engine.getId(), question_num: engine.getQuestionNum(),activity: engine.getQuestionActivity(),description: engine.getQuestionDescription())
+        let question = Question(id: engine.getId(), question_num: engine.getQuestionNum(),description: engine.getQuestionDescription())
         var ans = Answer(activity: 0, question: question, answer: 0, Entrepreneur: 1)
         switch answer!{
         case let str where str.contains("Nada de acuerdo"):
